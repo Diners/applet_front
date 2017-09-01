@@ -1,0 +1,75 @@
+/* pages/setting/ercode.wxss */
+page{
+  position: relative;
+}
+.erContainer{
+   position: absolute;
+   top:-60px;
+   left: 0;
+   width:100%;
+   height:200%;
+  background-color: rgba(0,0,0,.8);
+  margin: 0;
+  padding: 0;
+  z-index:9999;
+}
+.erContainer image{
+  max-width:480rpx;
+  height: 480rpx;
+  margin: 40% 135rpx;
+}
+      .mui-content .changan{
+            color:#8e8e8e;
+            font-size:28rpx;
+            text-align: center;
+        }
+         .mui-content{
+           width:100%;
+         }
+        .bigBox{
+            width:88%;
+            height:88%;
+            margin:120rpx auto;
+            margin-bottom:50rpx;
+        }
+        .about_user{
+            height: 80px;
+        }
+        .mui-content .userimg{
+            width:120rpx;
+            height: 120rpx;
+            display: block;
+            border-radius:50%; 
+            float: left;
+            margin:25rpx 25rpx 0 25rpx;
+        }
+        .mui-content .about_user view{
+            float: left;
+            width: 70%;
+            margin-top: 20rpx;
+            text-align: left;  
+        }
+        .mui-content .about_user .username{
+            font-size:14px;
+            color:#282828;
+            font-weight: bold;
+            line-height:150%;
+            width:100%;
+        }
+        .mui-content .about_user .novel{
+            font-size:12px;
+            color:#a4a4a4;
+            line-height:150%;
+            margin: 0;
+            width:100%;
+        }
+        .about_code image{
+            display: block;  
+            width: 140px;
+            height:140px;
+            /*height:50%;*/
+            border: 8px #fff solid;
+            border-radius: 20px;
+            vertical-align: middle;
+            margin: 53px auto;
+        }

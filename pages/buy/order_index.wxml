@@ -1,0 +1,86 @@
+<!--pages/order/order_index.wxml-->
+ <view class="navbar"> 
+      <view  data-idx="2" class="item {{currentTab==2? 'active' : ''}}"  bindtap="navbarTap">未发货</view>
+      <view  data-idx="3" class="item {{currentTab==3? 'active' : ''}}"  bindtap="navbarTap">已发货</view>
+       <view  data-idx="4" class="item {{currentTab==4? 'active' : ''}}"  bindtap="navbarTap">已收货</view>  
+</view>
+<view class="grey_part"></view>
+<view hidden="{{currentTab!=2}}" class="section">
+    <view class="content" wx:for="{{sendList}}" data-type="2" data-id="{{item.order_id}}" bindtap="checkListDetail">
+      <view class="content_title">
+            <image src="{{item.brand_logo}}" class="logo"></image>
+            <view>{{item.brand_name}}</view>
+            <image src="../../images/back_right.png" class="lead"></image>
+        </view>
+        <view class="goodOne" wx:for="{{item.goods}}">        
+            <image src="{{item.goods_img}}" class="content_img"></image>
+            <view class="content_font">
+                <view class="infoBox">
+                    <view class="name">{{item.title}}</view>
+                    <view class="close">￥{{item.price}}</view>
+                </view>
+                <view class="color">规格：{{item.colour}}</view>
+                <view class="actions">
+                   <view class="num_btn">x{{item.num}}</view>
+                </view>
+            </view>
+        </view>
+        <view style="clear:both;"></view>
+        <view class="order_mess">共计{{item.goods.length}}件商品，合计：
+             <text style="font-size:32rpx;font-weight:bold;">￥{{item.total_price}}</text>(含运费￥0.00)
+        </view> 
+     </view>  
+</view> 
+<view hidden="{{currentTab!=3}}" class="section">
+    <view class="content" wx:for="{{sendList}}" data-type="3" data-id="{{item.order_id}}" bindtap="checkListDetail">
+      <view class="content_title">
+            <image src="{{item.brand_logo}}" class="logo"></image>
+            <view>{{item.brand_name}}</view>
+            <image src="../../images/back_right.png" class="lead"></image>
+        </view>
+        <view class="goodOne" wx:for="{{item.goods}}" >        
+            <image src="{{item.goods_img}}" class="content_img"></image>
+            <view class="content_font">
+                <view class="infoBox">
+                    <view class="name">{{item.title}}</view>
+                    <view class="close">￥{{item.price}}</view>
+                </view>
+                <view class="color">规格：{{item.colour}}</view>
+                <view class="actions">
+                   <view class="num_btn">x{{item.num}}</view>
+                </view>
+            </view>
+        </view>
+        <view style="clear:both;"></view>
+        <view class="order_mess">共计{{item.goods.length}}件商品，合计：
+             <text style="font-size:32rpx;font-weight:bold;">￥{{item.total_price}}</text>(含运费￥0.00)
+        </view> 
+     </view>  
+</view>
+<view hidden="{{currentTab!=4}}" class="section">
+  <view class="content" wx:for="{{sendList}}" data-type="4" data-id="{{item.order_id}}" bindtap="checkListDetail">
+      <view class="content_title">
+            <image src="{{item.brand_logo}}" class="logo"></image>
+            <view>{{item.brand_name}}</view>
+            <image src="../../images/back_right.png" class="lead"></image>
+        </view>
+        <view class="goodOne" wx:for="{{item.goods}}">        
+            <image src="{{item.goods_img}}" class="content_img"></image>
+            <view class="content_font">
+                <view class="infoBox">
+                    <view class="name">{{item.title}}</view>
+                    <view class="close">￥{{item.price}}</view>
+                </view>
+                <view class="color">规格：{{item.colour}}</view>
+                <view class="actions">
+                   <view class="num_btn">x{{item.num}}</view>
+                </view>
+            </view>
+        </view>
+        <view style="clear:both;"></view>
+        <view class="order_mess">共计{{item.goods.length}}件商品，合计：
+             <text style="font-size:32rpx;font-weight:bold;">￥{{item.total_price}}</text>(含运费￥0.00)
+        </view> 
+     </view>  
+</view>
+

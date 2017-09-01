@@ -1,0 +1,117 @@
+<!--pages/commity/detail.wxml-->
+<view class="box">
+<!--头部-->
+<view class="head">
+   <image src="{{community_message.img}}" class="userUrl"></image>
+   <view class="ourText">{{community_message.desc}}</view>
+   <view style="clear:both;"></view>
+   <view class="join_us {{community_message.join_type==0?'join1':'join2'}}"  
+         bindtap="follow" data-value="{{community_message.join_type}}">{{community_message.join_type==0?'加入':'已加入'}}</view>
+   <view class="navbar"> 
+      <text  data-idx="0" class="item {{currentTab==0 ? 'active' : ''}}"  bindtap="navbarTap">动态</text>
+      <text  data-idx="1" class="item {{currentTab==1 ? 'active' : ''}}"  bindtap="navbarTap">推荐</text>  
+   </view> 
+</view>
+<view class="grey_part"></view>
+<view class="content">
+  <!--动态--> 
+  <view hidden="{{currentTab!=0}}"> 
+    <scroll-view  scroll-y="true"  style="height: {{windowHeight}}px; width: {{windowWidth}}px;"   bindscrolltoupper="pullDownRefresh"  bindscrolltolower="reachBottom">
+      <view class="detail_content" wx:for="{{topicList}}" wx:key="article_id">
+         <view class="detail">
+           <view class="user_created">
+             <view class="pull-left">
+                  <image src="{{item.user_head}}" bindtap="toUserCenter" data-id="{{item.user_id}}"></image>
+             </view>
+             <view class="pull-left">
+                <view class="author">{{item.user_name}}</view>
+                 <view class="time">{{item.created_time}}</view>
+             </view>
+             <image src="../../images/report.png" class="isReport" bindtap="report"></image>
+           </view>
+           <view class="introduce">
+              <view class="text">
+                <text wx:if="{{isFold}}">{{item.article_content}}</text>
+                <text wx:else>{{item.article_part}}</text>
+                <view bindtap="load" value="{{isFold}}"  style="color:#aaa;" 
+                      hidden="{{item.article_content.length<=30}}">{{text?'收起':'显示更多'}}</view>
+               </view>
+               <image src="{{item}}" class="article_img" wx:for="{{item.article_images}}"></image>
+           </view>
+            <view class="like">
+               <image src="../../images/loved.png" class="loved"></image>
+               <text>{{item.like_count}}人喜欢</text>
+               <image src="{{item.like_type==0?'../../images/quit.png':'../../images/love.png'}}"
+                       bindtap="isAddLove"  data-id="{{item.like_type}}" class="isCollect" data-articleId="{{item.article_id}}"></image>
+           </view>
+         </view>
+      </view>
+      <view class="detail" style="margin-bottom:24px;text-align:center;padding:50px 0 25px 0;font-size:14px;color:#aaa;">
+             人家都被你看完了
+      </view>
+   </scroll-view> 
+   
+  </view> 
+  
+  <!--推荐--> 
+  <view hidden="{{currentTab!=1}}">
+   <scroll-view  scroll-y="true"  style="height: {{windowHeight}}px; width: {{windowWidth}}px;"   
+                bindscrolltoupper="pullDownRefresh"   bindscrolltolower="reachBottom">
+    <view class="mian" wx:for="{{goodsList}}" data-id="{{item.brand_id}}" wx:key="brand_id">
+        <view class="user_created" style="width:89.4%;margin:0 auto;">
+            <view class="pull-left">
+                <image src="{{item.brand_logo}}"></image>
+            </view>
+            <view class="pull-left">
+                <view class="author">{{item.brand_name}}</view>
+                <view class="time">{{item.brand_introd}}</view>
+            </view>
+            <navigator url="../goods/goodsList?brand_id={{item.brand_id}}" class="mui-navigate-right" open-type="redirect">全部商品 ></navigator>
+        </view>
+        <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+                <view style="width: 100px; height: 150px; display: inline-block" class="mui-control-item" wx:for="{{item.goods_list}}" wx:key="goods_id">
+                <!--item.category_id-->
+                    <view data-id="{{item.goods_id}}" data-type="{{item.category_id}}" bindtap="forGoodsDetail">
+                        <image src="{{item.goods_thumb}}"></image>
+                        <view class="title">{{item.goods_name}}</view>
+                        <view class="money">￥{{item.goods_price}}</view>
+                    </view>
+                </view>       
+
+        </scroll-view>
+    </view>
+    </scroll-view>
+  </view>
+</view>
+
+<!--点击发布-->
+<view class="topic" bindtap="toPost" style="top:{{topicHeight}}px">
+    <image src="../../images/topic.png"></image>
+</view>
+
+
+<!--举报-->
+<view class="report_mask" hidden="{{isReport}}">
+  <view class="reportContainer" animation="{{animationData}}">
+    <image src="../../images/black_close.png" bindtap="closeReport"></image>
+    <view bindtap="showDel">举报</view>
+  </view>
+</view>
+  
+
+<!--是否举报-->
+<view class="sure_mask" hidden="{{isDel}}">
+    <view class="sure_delete">
+        <view class="text">确认要举报这篇内容吗？</view>
+        <view style="clear: both;"></view>
+        <view class="del_btn" bindtap="closeDel"><image src="../../images/close.png" alt=""></image></view>
+        <view class="sure_btn" bindtap="closeDel"><image src="../../images/ok.png" alt=""></image></view>
+    </view>
+</view>
+
+
+</view>
+
+
+
+

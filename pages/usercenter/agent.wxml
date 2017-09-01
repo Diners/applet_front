@@ -1,0 +1,47 @@
+<view class="big">
+    <!--头部以下内容-->
+      <view class="My_daili">
+        <view class="My_daili_title">
+        <view class="My_daili_pinpai"><image src="{{header_Img}}"></image></view>
+        <text>家的要素</text><text>/</text><text>7笔新订单</text>
+        <image class="show" src="../../images/all.png" mode="widthFix"></image>
+        </view>
+      </view>
+      <!--代理列表-->
+      <view class="My_daili_list" bindtap="Navigate">
+        <view class="list_content">
+            <image src="../../images/shopping1.png"></image>
+            <view class="list_content_right">
+              <text>Domain 铁艺纸巾盒 铁艺纸巾盒 铁艺纸巾盒</text>
+              <text>卖出:14</text>
+              <view class="dali_img_list">
+              <image src="../../images/shopping1.png"></image>
+              <image src="../../images/shopping1.png"></image>
+              <image src="../../images/shopping1.png"></image>
+              <image src="../../images/shopping1.png"></image>
+                <text>...</text>
+                <view class="dali_num">+7</view>
+              </view>
+            </view>
+        </view>
+      </view>
+        
+<view class="My_daili_list"  bindtap="Navigate">
+        <view class="list_content">
+            <image src="../../images/shopping1.png"></image>
+            <view class="list_content_right">
+              <text>Domain 铁艺纸巾盒 铁艺纸巾盒 铁艺纸巾盒</text>
+              <text>卖出:14</text>
+              <view class="dali_img_list">
+              <image src="../../images/shopping1.png"></image>
+              <image src="../../images/shopping1.png"></image>
+              <image src="../../images/shopping1.png"></image>
+              <image src="../../images/shopping1.png"></image>
+                <text>...</text>
+                <view class="dali_num">+7</view>
+              </view>
+            </view>
+        </view>
+      </view>
+
+</view>

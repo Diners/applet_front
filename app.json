@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/usercenter/index",
+    "pages/usercenter/caijian",
+    "pages/commity/index",
+    "pages/buy/index",
+    "pages/cart/index",
+    "pages/usercenter/agent_detail",
+    "pages/goods/goodsDetail",
+    "pages/buy/order_index",
+    "pages/novel/goodsModel",
+    "pages/novel/addModel",
+    "pages/novel/novel_detial", 
+    "pages/novel/novel",
+    "pages/novel/add_novels",
+    "pages/goods/goodsList",
+    "pages/account/index",
+    "pages/usercenter/agent",
+    "pages/logs/logs",
+    "pages/commity/detail",
+    "pages/commity/post",
+    "pages/setting/ercode",
+    "pages/setting/setting",
+    "pages/address/index",
+    "pages/address/addAddress",
+    "pages/address/editAddress",  
+    "pages/usercenter/edit",
+    "pages/buy/express",
+    "pages/buy/order_detail",
+    "pages/account/takecash"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "杂制|制造你的专属杂志",
+    "navigationBarTextStyle":"black"
+  }
+}

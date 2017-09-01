@@ -1,0 +1,260 @@
+/* pages/account/takecash.wxss */
+        page {
+            background: #f6f6f6;
+            position: relative;
+        }
+        #cash-submit .save{
+            display: block;
+            width: 89%;
+            margin:60px auto;
+            margin-bottom: 60rpx;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            background-color: #ffde00;
+            border: 0;
+            border-radius: none;
+        }
+        #cash-submit .save::after{
+          border: 0;
+          border-radius: none;
+        }
+        .tips {
+            line-height: 20px;
+            margin-bottom: 0;
+            text-align: center;
+            font-size: 12px;
+            color: #a4a4a4;
+        }
+
+        .cash {
+            position: fixed;
+            left: 20%;
+            top: 37%;
+            width: 60%;
+            height: 26%;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .cash image {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            margin-left: -15px;
+        }
+
+        .cash h4 {
+            text-align: center;
+            margin-top: 33%;
+        }
+
+        .cash p {
+            text-align: center;
+            color: #7d8989;
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        .cash footer {
+            position: absolute;
+            background: #ffd202;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .sure h4 {
+            margin-top: 20%;
+            font-size: 14px;
+            padding: 0 10px 0 20px;
+            line-height: 20px;
+        }
+
+        .sure {
+            position: fixed;
+            left: 20%;
+            top: 37%;
+            width: 60%;
+            height: 26%;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .sure footer {
+            position: absolute;
+            background: #ffd202;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .sure footer span {
+            display: block;
+            float: left;
+            width: 50%;
+            font-size: 14px;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .sure footer span:nth-of-type(1) {
+            border-right: 1px solid #fff;
+        }
+
+        .yue {
+            position: fixed;
+            left: 20%;
+            top: 37%;
+            width: 60%;
+            height: 26%;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .yue h4 {
+            text-align: center;
+            margin-top: 20%;
+            font-size: 14px;
+        }
+
+        .yue footer {
+            position: absolute;
+            background: #ffd202;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .ims {
+            width: 18px;
+            margin-top: 14px;
+            float: left;
+        }
+
+        .cash_content {
+            width: 87%;
+            height: 120px;
+            margin: 40px auto;
+            background-color: #fff;
+        }
+
+        .cash_content .top {
+            width: 87%;
+            height: 60px;
+            margin: 0 auto;
+            line-height: 60px;
+            position:relative; 
+            border-bottom: 1px solid #ececec;
+
+        } 
+        .cash_content .top  input{
+            display: inline-block;
+            width:80%;
+            font-size: 58rpx;
+            font-weight: bold;
+            position: absolute;
+            top:17px;
+            left:56px;
+            color: #555;
+        }
+        .cash_content .bottom {
+            width: 87%;
+            height: 60px;
+            margin: 0 auto;
+            line-height: 60px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #aaa;
+        }
+         .cash_content .bottom .bank_yu{
+              display: inline-block;
+        }
+         .cash_content .bottom  .all{
+            width: 25%;
+            font-size: 14px;
+            color: #ffde00;
+            display: inline-block;
+            margin-left: 20px;
+            height: 32px;
+            line-height: 32px;
+            background-color: #fff;
+            font-weight: bold;     
+        }
+
+        .cash_content .top .line {
+            display: inline-block;
+            width: 1px;
+            height: 20px;
+            margin-right: 15px;
+            background-color: #ececec;
+            vertical-align: middle;
+        }
+        /*提现成功*/
+        .sure_mask{
+            position: absolute;
+            left: 0;
+            top: -60px;
+            width:100%;
+            height:241%;
+            background-color: rgba(0,0,0,.5);
+            margin: 0;
+            padding: 0;
+            z-index:9999;
+        }
+        .sure_mask .sure_delete{
+            background-color:#ffd400;
+            width: 80.5%;
+            margin:60% auto; 
+            height: 124px;
+        }
+        .sure_mask .sure_delete .text{
+            color: #fff;
+            font-weight: bold;
+            font-size: 14px;
+            margin:0 25px;
+            padding-top: 25px;
+        }
+          .sure_mask .sure_delete .del_btn{
+            display: inline-block;
+            width: 33%;
+            margin: 25px;
+            height: 25px;
+            line-height: 25px;
+        }
+         .sure_mask .sure_delete .sure_btn{
+            float: right;
+            width: 23%;
+            margin: 25px;
+            height: 25px;
+            line-height: 25px;
+        }
+        .sure_mask .del_btn{float: left}
+        .sure_mask .sure_btn{float: left;text-align: right;}
+        .sure_mask .del_btn image{
+            width:26rpx;
+            height:26rpx;
+            vertical-align: middle;
+        }
+.sure_mask .sure_btn image{
+    width:36rpx;
+    height:26rpx;
+    vertical-align: middle;
+} 

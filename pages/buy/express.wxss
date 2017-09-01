@@ -1,0 +1,99 @@
+/* pages/buy/express.wxss */
+page{
+  margin: 0;
+  padding: 0;
+}
+.grey_part{
+  height: 10px;
+  background-color: #f6f6f6;
+  margin: 0;
+}
+.handle{
+  width: 89.4%;
+  margin: 0 auto;
+  height: 150rpx;
+  padding: 0;
+}
+.handle image:nth-child(1){
+  width: 123rpx;
+  height: 95rpx;
+  float: left;
+  margin-top:26rpx;
+  vertical-align: middle;
+}
+.handle .info{
+   float: left;
+   width: 65%;
+   margin-top: 38rpx;
+   margin-left: 20rpx;
+   color: #282828;
+   font-size: 28rpx;
+   font-weight: bold;
+}
+.handle .info .time{
+   color: #a4a4a4;
+   font-size: 24rpx;
+   padding-top: 8px;
+   font-weight: 100;
+}
+.handle image:nth-child(3){
+  width: 19rpx;
+  height: 31rpx;
+  float: right;
+  margin-top: 59rpx;
+  vertical-align: middle;
+}
+.container-ex{
+  width: 89.4%;
+  margin: 0 auto;
+  padding:0;
+  height:150rpx;
+}
+.container-ex .line{
+  float: left;
+  width:1px; 
+  height:150rpx;
+  background: #ccc;
+  margin-right: 33rpx;
+  position: relative;
+}
+.container-ex .line .piont{
+  position: absolute;
+  width: 19rpx;
+  height: 19rpx;
+  top:65rpx;
+  left:-9rpx;
+  border-radius: 50%;
+}
+.container-ex  .expressInfo{
+  width: 92.2%;
+  float: left;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #f6f6f6;
+}
+.container-ex  .expressInfo .info{
+  font-size:26rpx;
+  font-weight:bold;
+  color:#a4a4a4;
+  padding-top:40rpx;
+  margin-bottom:16rpx;
+}
+.container-ex .expressInfo .time{
+  font-size:24rpx;
+  color:#a4a4a4;
+  margin-bottom: 40rpx;
+}
+.yellow{
+  background: #ffd400;
+}
+.grey{
+  background: #ccc;
+}
+.black{
+  color:#282828;
+  font-size:26rpx;
+  font-weight:bold;
+  padding-top:40rpx;
+  margin-bottom:16rpx;
+}

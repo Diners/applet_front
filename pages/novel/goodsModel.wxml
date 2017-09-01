@@ -1,0 +1,113 @@
+<!--pages/novel/goodsModel.wxml-->
+<view class="page">
+<view class="user_cehua" hidden="{{open1}}" style="left:-{{left}}rpx" bindtap="hideSearch"  >
+<view class="yin">
+    <view class="user_cehua_top" style="background:#141414">
+    <image src="{{header_Img}}" mode="widthFix"></image>
+          <view class="user_cehua_center">
+            <text>{{userName}}</text>
+            <text>{{user_diy}}</text>
+          </view>
+          <view class="user_xinxi">
+          <view class="xinxi_one" style="margin-right:68rpx;">
+            <text>订阅</text>
+            <text>17</text>
+          </view>
+          <view class="border_right"></view>
+          <view class="xinxi_one" style="margin-left:68rpx;">
+            <text>粉丝</text>
+            <text>170</text>
+          </view>
+          </view>
+    </view>
+    <view class="user_cehua_bottom" >
+    <navigator url="../usercenter/index" class="user_list">
+        <image src="../../images/zazhi.png" mode="widthFix"></image>
+        <text>杂志</text>
+      </navigator>
+      <!--url="../order/order_index" -->
+    <navigator class="user_list" url="../buy/order_index">
+        <image src="../../images/goumai.png" mode="widthFix"></image>
+        <text>购买</text>
+      </navigator>
+      <!--url="../usercenter/agent"-->
+      <!--<navigator  class="user_list" bindtap="tips"> 
+            <image src="../../images/daili.png" mode="widthFix"></image>
+            <text>代理</text>
+          </navigator>-->
+          <view class="border_bottom"></view>
+          <!--url="../account/index"-->
+          <navigator  class="user_list" >
+            <image src="../../images/yue.png" mode="widthFix"></image>
+            <text>余额</text>
+          </navigator>
+          <navigator url="../usercenter/edit" class="user_list">
+            <image src="../../images/shezhi.png" mode="widthFix"></image>
+            <text>设置</text>
+          </navigator>
+          <!--url="../commity/index"-->
+          <navigator  class="user_list" >   
+            <image src="../../images/shequ.png" mode="widthFix"></image>
+            <text>进入社区</text>
+          </navigator>
+          <view class="padding_bottom"></view>
+          </view>
+    </view>
+</view>
+<!--侧边栏结束-->
+<view class="User_box" >
+  <image src="../../images/more_white.png" mode="widthFix" bindtap="silde"></image>
+  <!--<image src="../../images/serach.png"  mode="widthFix" bindtap="showSearch"></image>-->
+  <view class="tags">
+     <view  data-idx="{{item.cat_id}}" 
+     class="item {{currentTab==item.cat_id ?'active' : 'border'}}" bindtap="navbarTap" wx:for="{{tags}}">#{{item.cat_name}}</view>
+  </view>
+  <view class="mui-content">
+    <view class="mainWrapper">
+      <view class="classname" wx:for="{{goodsList}}" bindtap="tips">
+      <!--<navigator url="goods_detail?goods_id={[item.goods_id}}" wx:for="{{goodsList}}">-->
+            <view class="item">
+                <image src="{{item.image}}"/>
+                <view>{{item.goods_name}}<text class="price">￥{{item.goods_price}}</text></view>
+            </view>
+         <!--</navigator>-->
+      </view>   
+    </view>
+  </view>
+  
+  <view class="save" style="width:30%;padding-left:40rpx;box-sizing: border-box;margin-top:20rpx;" hidden="{{Issave}}">
+   <image src="{{imgList}}" mode="widthFix" ></image>
+   <image src="../../images/xie.png" style="margin-left:12rpx" mode="widthFix" ></image>
+    <text style="float:left;text-align:left">{{shoucang}}</text>
+   </view>
+  <view class="deploy" hidden="{{Issave1}}">
+       <image src="../../images/save.png" class="{{isEdit==1?'':'hide'}}" bindtap="saveModel"></image>
+       <image src="{{isDeloy==0?'../../images/open.png':'../../images/hide.png'}}" bindtap="openActions"  animation="{{animation}}" 
+             class="{{isEdit==1?'hide':''}}"></image>
+       <image src="../../images/ercode.png" class="{{isDeloy!=1?'hide':''}}" bindtap="toErcode"></image>
+      <image src="../../images/open.png" class="{{isDeloy!=1?'hide':''}}" bindtap="addNext"></image>  
+      <image src="../../images/del.png" class="{{isDeloy!=1?'hide':''}}" bindtap="delThis"></image>  
+ <view class="mini" bindtap="toNext">
+       <image src="../../images/arrowNext.png"></image>
+</view>
+ <view class="mini" bindtap="toPrev">
+       <image src="../../images/arrowPrev.png"></image>
+</view>
+   </view>
+</view>
+<!--<view class="researchBox" hidden="{{isHide}}">
+   <image src="../../images/hide.png" bindtap="hideSearch" class="hideImg"></image>
+    <input type="text" placeholder-style="text-align: center;" placeholder="搜索商品" maxlength="20" bindblur="fetchTypeInfo"/>
+</view>-->
+
+<view class="sure_mask" hidden="{{isDel}}">
+    <view class="sure_delete">
+        <view class="text">确认删除此页？</view>
+        <view style="clear: both;"></view>
+        <view class="del_btn" bindtap="closeDel"><image src="../../images/close.png" alt=""></image></view>
+        <view class="sure_btn" bindtap="sureDel"><image src="../../images/ok.png" alt=""></image></view>
+    </view>
+</view>
+ <view style="width:100%;height:100%;position:fixed;background:white;background:rgba(0,0,0,0.5)" hidden="{{hide}}" bindtap="hideSearch"></view>
+</view>
+

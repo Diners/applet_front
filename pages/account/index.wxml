@@ -1,0 +1,57 @@
+<!--pages/account/index.wxml-->
+<view class="mui-bar mui-bar-nav" style=" background: url('../../images/account_bg.png') no-repeat;background-size: 100% 100%;">
+     <navigator url="../account/takecash" class="mui-pull-right">
+        <text>提现</text>
+        <image src="../../images/takecash.png"></image>
+    </navigator>
+    <view class="cost">
+        <view class="earn">
+            赚到<view>{{account.add_money}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="all">
+            我的余额（元) 
+            <view style="font-size:30rpx;font-weight:bolder;text-align:center;padding-top:30rpx;">{{account.total_money}}</view>
+        </view>
+        <view class="line"></view>
+        <view class="spend">
+            消费 <view>{{account.del_money}}</view>
+        </view>
+    </view>
+</view>
+<view id="OA_task_1" class="mui-table-view" wx:for="{{list}}"  bindtap="tocheckDetail">
+    <view class="mui-table-view-cell">
+           <view>
+               <view class="type" wx:if="{{item.type==0}}">
+                   <i class="point" style="background-color: #ff5622;"></i>
+                   <image class="mui-media-object mui-pull-left" src="{{item.image}}"></image>
+                   <view class="mui-media-body">
+                       <view>{{item.message}}</view>
+                       <view class='mui-ellipsis'>{{item.time1}}</view>
+                   </view>
+                   <view class="shoukuan">-{{item.money}}</view>
+                </view>
+               <view class="type" wx:if="{{item.type==1}}">
+                   <i class="point" style="background-color: #ffdd00;"></i>
+                   <image class="mui-media-object mui-pull-left" src="{{item.image}}"></image>
+                   <view class="mui-media-body">
+                       <view>{{item.message}}</view>
+                       <view class='mui-ellipsis'>{{item.time1}}</view>
+                   </view>
+                   <view class="jinzhang">+{{item.money}}</view>
+                </view>
+              <view class="type" wx:if="{{item.type==2}}">
+                   <i class="point" style="background-color: #68bf7b;"></i>
+                   <image class="mui-media-object mui-pull-left" src="{{item.image}}"></image>
+                   <view class="mui-media-body">
+                       <view>{{item.message}}</view>
+                       <view class='mui-ellipsis'>{{item.time1}}</view>
+                   </view>
+                   <view class="chuzhang">-{{item.money}}</view>
+                </view>
+           </view>
+    </view>
+</view>
+<view class="nolist" wx:if="{{list.length==0&&list}}">
+     <image src="../../images/nolist.png"></image>
+</view>

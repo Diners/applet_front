@@ -1,0 +1,16 @@
+<view class="add_box">
+<text hidden="true">{{num}}</text>
+  <view class="add_yin"></view>
+  <image src="../../images/title_add.png" mode="widthFix"></image>
+  <view class="lis"><image src="../../images/add_pic.png" mode="widthFix" bindtap="clickPhoto"></image>
+  <image src="../../images/add_shopping.png" mode="widthFix" bindtap="clickShopping"></image></view>
+  <view class="close">
+  <image src="../../images/close2.png" mode="widthFix" bindtap="clickClose"></image>
+  </view>
+</view>
+<view class="toast" hidden="{{IShide}}">
+  <view class="toast_son">
+  <text>{{tishi}}</text>
+  <image src="../../images/remind.png" mode="widthFix" ></image>
+  </view>
+</view>

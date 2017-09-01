@@ -1,0 +1,140 @@
+text{
+  font-family: "微软雅黑";
+}
+.big{
+  width: 100%;
+  height: auto;
+  float: left;
+  background: #f6f6f6;
+}
+.My_daili{
+  width: 100%;
+  height: auto;
+  float: left;
+  padding: 40rpx;
+  box-sizing: border-box;
+  background: white;
+  margin-bottom: 20rpx;
+}
+.My_daili_title{
+  width: 100%;
+  height: auto;
+  float: left;
+}
+.My_daili_pinpai{
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 50%;
+  float: left;
+  margin-right:30rpx;
+}
+.My_daili_pinpai image{
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 50%;
+}
+.My_daili text:nth-of-type(1){
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #282828;
+  line-height: 84rpx;
+}
+.My_daili text:nth-of-type(2){
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #282828;
+  line-height: 84rpx;
+  margin-left: 30rpx;
+}
+.My_daili text:nth-of-type(3){
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #ffd400;
+  line-height: 84rpx;
+  margin-left: 30rpx;
+}
+.show{
+  width: 36rpx;
+  float: right;
+  margin-top: 30rpx;
+}
+
+
+.My_daili_list{
+  width: 100%;
+  height: auto;
+  float: left;
+  background: white;
+  border-bottom:1px solid #f6f6f6; 
+}
+.list_content{
+  width: 100%;
+  height: auto;
+  float: left;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.list_content>image{
+  width: 190rpx;
+  height: 190rpx;
+  float: left;
+  border-radius: 8px;
+  margin-right: 40rpx;
+}
+.list_content_right{
+  width:65%;
+  height: 100%;
+  float: left;
+  margin-top: 20rpx;
+}
+.list_content_right>text{
+  width: 100%;
+  height: auto;
+  display: block;
+  float: left;
+}
+.list_content_right>text:nth-of-type(1){
+  color: #555555;
+  font-size: 26rpx;
+  white-space:nowrap;
+   overflow:hidden; 
+   font-weight: bold;
+   text-overflow:ellipsis;
+}
+.list_content_right>text:nth-of-type(2){
+  font-size: 20rpx;
+  color: #aaaaaa;
+  margin-top: 20rpx;
+}
+.dali_img_list{
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-top: 30rpx;
+}
+.dali_img_list>image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  float: left;
+  margin-left: 10rpx;
+}
+.dali_img_list>text{
+  height: auto;
+  display: block;
+  float: left;
+  margin-top: -10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.dali_num{
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+  background: #ffd400;
+  color: #282828;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 50%;
+  font-size: 22rpx;
+}

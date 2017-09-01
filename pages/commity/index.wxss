@@ -1,0 +1,89 @@
+/* pages/commity/index.wxss */
+page{
+  background: #f6f6f6;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.navBar{
+  height:47px;
+  line-height: 47px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+  position: fixed;
+  bottom:0;
+  left:0;
+}
+.navBar .bar{
+  float: left;
+  width: 45%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #aaa;
+}
+.navBar .line{
+  width:2px;
+  height:15px;
+  float: left;
+  margin-top: 16px;
+  background-color: #f6f6f6;
+}
+.navBar .bar image{
+  max-width:20px;
+  height:20px;
+  margin-right: 13px;
+  vertical-align: middle;
+}
+.item_clearfix{
+  width:94.6%;
+  background: #fff;
+  border-radius: 6px;
+  height:175px;
+  margin:10px auto; 
+  overflow: hidden;
+}
+.item_clearfix .aboutUser{
+  width: 94.3%;
+}
+.item_clearfix .aboutUser .userUrl{
+  width:10.6%;
+  height: 40px;
+  border-radius: 50%;
+  float: left;
+  margin: 10px;
+}
+.item_clearfix .aboutUser .usertext{
+  float: left;
+  margin-top: 10px;
+  width:80.6%;
+}
+.item_clearfix .aboutUser .usertext .title{
+  padding-top: 6px;
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+}
+.item_clearfix .aboutUser .usertext .focus{
+  font-size: 11px;
+  color: #aaa;
+  line-height: 150%;
+   padding-top: 2px;
+}
+.item_clearfix .imgList{
+  width: 100%;
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between；
+}
+.item_clearfix .imgList image{
+  width: 29%;
+  height:209rpx;
+  margin: 0 5px;
+  border-radius: 6px;
+}
+.item_clearfix .imgList image:nth-child(1){
+  margin-left:12px;
+}

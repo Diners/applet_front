@@ -1,0 +1,109 @@
+<!--pages/order/index.wxml-->
+<view class="userAddress">
+   <view class="add_img">
+      <image src="../../images/addImage.png" mode="widthFix"></image>
+    </view>
+    <view class="add_font">
+      <text>您还没有添加收货地址</text>
+    </view>
+   <!--<i class="{{state==1?'moren':''}}"></i>              
+    <view class="top">
+         <view class="name">{{item.username}}钟意</view>
+         <view class="phone">{{item.phone}}13641651940</view>
+     </view>
+     <view class="address_detail">
+        <view>{{item.address}}钟定许辉橙程意周红红</view>
+     </view>    -->
+</view>
+<view class="grey_part"></view>       
+<view class="handle" hidden="{{state==0}}">
+    <image src="../../images/express.png"></image>
+    <view class="info">
+       <view>您的订单开始处理</view>
+       <view class="time">2017-7-21 16：05</view>
+    </view>
+    <image src="../../images/back_right.png"></image>
+</view>
+<view class="grey_part" hidden="{{state==0}}"></view>
+<view class="content">
+    <view class="content_title">
+        <image src="../../images/check.png" class="logo"></image>
+        <view>有物</view>
+    </view>
+    <view class="goodOne">
+        <image src="../../images/shopping1.png" class="content_img"></image>
+        <view class="content_font">
+            <view>
+                <view>Domian 铁艺纸巾盒</view>
+            </view>
+            <view class="color">黄色</view>
+            <view class="actions">
+                <view class="price">￥49</view>
+                <view class="num_btn">x1</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view style="clear:both;"></view>
+<view class="expressInfo">
+    <view class="about">
+        邮费(满40包邮)
+        <view class="same">包邮</view>
+    </view>
+    <view class="about">
+      小计
+      <view class="same">￥98</view>
+    </view>
+    <view class="about">
+        <label>备注</label>
+         <textarea  placeholder="这一刻,我想说..." class="note" placeholder-style="color:#aaa;" bindblur="getValue"/>
+         <view class="duihuanma">
+          <view class="duanhuanma_left">
+            <text>输入优惠码</text>
+            <input type="number" style="border:none" bindinput="Input_content" />
+          </view>
+          <view class="duanhuanma_right">
+          <text bindtap="duihuan_btn">{{duihuan}}</text>
+          </view>
+         </view>
+    </view>
+</view>
+<view class="bottom_box">
+  <view class="bottom_box_left">
+    <text>合计: ￥149</text>
+  </view>
+  <view class="bottom_box_right">
+    <view class="submit_btn" bindtap="submit_btn">提交订单</view>
+  </view>
+</view>
+<!--提醒发货-->
+<view class="remindContainer" hidden="{{isRemind}}">
+  <image src="../../images/remind.png"></image>
+  <view>{{Tip}}</view>
+</view>
+<view class="fukuan" hidden="{{Ishide1}}">
+ <view class="pay_list">
+ <image src="../../images/black_close.png" mode="widthFix"   bindtap="close_btn"></image>
+ <view class="pay_post">
+  <view class="yue_list">
+  <image src="../../images/money1.png" mode="widthFix"></image>
+  <text>余额支付</text>
+  <view class="yue_list_right">
+  <text>198</text>
+  <image src="{{img}}" mode="widthFix" data-id="0" bindtap="change"></image>
+  </view>
+  </view>
+       <view class="yue_list">
+      <image src="../../images/weixin.png" mode="widthFix"></image>
+      <text>微信支付</text>
+      <view class="yue_list_right">
+      <text hidden="true">{{posts}}</text>
+      <image src="{{img}}" mode="widthFix" data-id="1" bindtap="change1" ></image>
+      </view>
+      </view>
+      <view class="btns" bindtap="payment">
+        确认支付￥49元
+      </view>
+ </view>
+ </view>
+</view>

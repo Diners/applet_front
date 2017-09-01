@@ -1,0 +1,84 @@
+<!--pages/usercenter/agent_detail.wxml-->
+<view class="agent_box">
+    <view class="agent_Content">
+          <view class="agent_list">
+          <view class="toast" hidden="{{Ishide}}">
+            <view class="toast_left">
+              三天内不确定发货，交易自动结束，钱款返还至买家余额
+            </view>
+            <image class="shows" src="../../images/remind.png" mode="widthFix" style="width:40rpx;height:40rpx;float:right"></image>
+          </view>
+          <image src="../../images/shopping1.png"></image>
+          <view class="agent_list_content">
+            <text>Domian 铁艺纸巾盒</text>
+            <text>卖出：14</text>
+            <text>未发货数量：4</text>
+          </view>
+          </view>
+              <view class="fahuo_list" style="box-shadow bottom" >
+            <text data-index="0" bindtap="changes" class="{{Index==0?'':'active'}}">代发货</text>
+            <view class="he"></view>
+            <text data-index="1" class="active" bindtap="changes" class="{{Index==1?'':'active'}}">已发货</text>
+          </view>  
+                <view class="tabs">
+                  <view class="tabs_one" hidden="{{Index!=0}}">
+                   <!--内容start !!-->
+                        <view class="tabs_list" wx:for="{{fahuo}}">
+                          <image src="{{header_Img}}" mode="widthFix"></image>
+                              <view class="user_info">
+                                <text>{{user_name}}</text>
+                                <text>规格：黄色大盒 x2</text>
+                              </view>
+                              <view class="btns" style="border-width:{{item.border}}px" bindtap="queding" data-index="{{item.indexs}}">{{item.text}}</view>
+                              <view class="border"></view>
+                                  <view class="user_mobil">
+                                    <text>{{user_name}}</text>
+                                    <text>133****3073</text>
+                                    <text>还剩3天发货时间</text>
+                                  </view>
+                                  <view class="user_address">
+                                    <text>上海市徐汇区 苍梧路608号</text>
+                                  </view>
+                                  <textarea placeholder="这里是备注" placeholder-class="pl" />
+                        </view>
+                        <!--内容end !!-->
+                  </view>
+                  <view class="tabs_two" hidden="{{Index!=1}}" >
+                          <!--内容start !!-->
+                        <view class="tabs_list">
+                          <image src="{{header_Img}}" mode="widthFix"></image>
+                              <view class="user_info">
+                                <text>{{user_name}}</text>
+                                <text>规格：黄色大盒</text>
+                              </view>
+                              <view class="btns1">待确认收货</view>
+                              <view class="border"></view>
+                                  <view class="user_mobil">
+                                    <text>{{user_name}}</text>
+                                    <text>133****3073</text>
+                                    <text>还剩3天发货时间</text>
+                                  </view>
+                                  <view class="user_address">
+                                    <text>上海市徐汇区 苍梧路608号</text>
+                                  </view>
+                                  <textarea placeholder="这里是备注" placeholder-class="pl" />
+                                  <text class="kuaidi">快递单号：4399336949</text>
+                        </view>
+                        <!--内容end !!-->
+                  </view>
+                </view>      
+    </view>
+</view>
+
+
+<view class="big_box" hidden="{{isa}}">
+  <view class="show_box" style="left:{{left}}px;top:{{top}}px">
+    <view class="show_box_content">
+      <input  type="number" placeholder="输入快递单号" placeholder-class="bot" confirm-type="done" bindinput="InputTaps" />
+      <view class="show_box_imgs">
+        <image src="../../images/close.png" mode="widthFix" bindtap="closeBox"></image>
+        <image src="../../images/ok.png" mode="widthFix" bindtap="SubmitINputContent"></image>
+      </view>
+    </view>
+  </view>
+</view>

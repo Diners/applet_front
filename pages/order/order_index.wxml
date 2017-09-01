@@ -1,0 +1,62 @@
+<!--pages/order/order_index.wxml-->
+ <view class="navbar"> 
+      <view  data-idx="0" class="item {{currentTab==0 ? 'active' : ''}}"  bindtap="navbarTap">已发货</view>
+      <view  data-idx="1" class="item {{currentTab==1 ? 'active' : ''}}"  bindtap="navbarTap">未发货</view>  
+</view>
+<view class="grey_part"></view> 
+<view hidden="{{currentTab!=0}}" class="section">
+    <view class="content">
+        <view class="goodOne">
+          <navigator url="/pages/order/order_detail?goods_id={{item.id}}">
+            <image src="../../images/shopping1.png" class="content_img"></image>
+            <view class="content_font">
+                <view>
+                    <view class="name">Domian 铁艺纸巾盒</view>
+                    <view class="close">￥49</view>
+                </view>
+                <view class="color">规格：黄色</view>
+                <view class="actions">
+                    <view class="price">合计：￥49</view>
+                   <view class="num_btn">x1</view>
+                </view>
+            </view>
+          </navigator>  
+        </view>
+        <view class="goodOne">
+           <navigator url="/pages/order/order_detail?goods_id={{item.id}}">
+            <image src="../../images/shopping1.png" class="content_img"></image>
+            <view class="content_font">
+                <view>
+                    <view class="name">Domian 铁艺纸巾盒</view>
+                    <view class="close">￥49</view>
+                </view>
+                <view class="color">规格：黄色</view>
+                <view class="actions">
+                    <view class="price">合计：￥49</view>
+                    <view class="num_btn">x1</view>
+                </view>
+            </view>
+          </navigator>  
+        </view>
+    </view>
+</view>
+<view hidden="{{currentTab!=1}}" class="section">
+    <view class="content">
+        <view class="goodOne">
+         <navigator url="/pages/order/order_detail?goods_id={{item.id}}">  
+            <image src="../../images/shopping1.png" class="content_img"></image>
+            <view class="content_font">
+                <view>
+                    <view class="name">Domian 铁艺纸巾盒</view>
+                    <view class="close">￥49</view>
+                </view>
+                <view class="color">规格：黄色</view>
+                <view class="actions">
+                    <view class="price">合计：￥49</view>
+                   <view class="num_btn">x1</view>
+                </view>
+            </view>
+           </navigator>
+        </view>
+     </view>  
+</view>

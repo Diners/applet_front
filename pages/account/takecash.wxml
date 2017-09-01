@@ -1,0 +1,34 @@
+<!--pages/account/takecash.wxml-->
+<view class="mui-content">
+ <form bindsubmit="formSubmit">
+    <input  name="user_id" value="{{user_id}}" hidden="true"/>
+    <view class="cash_content">
+        <view class="top">
+            <image src="../../images/mycoin.png" 
+                   style="display: inline-block; width:18px;height:21px;margin-right:15px;vertical-align: middle;" ></image>
+            <view class="line"></view>
+
+            <input type="number" value="{{cash_num}}" name="money" maxlength="7"/>
+        </view>
+        <view class="bottom">
+            可用余额 : <view class="bank_yu">{{total_money}}</view><view class="all" bindtap="getAll">全部提现</view>
+        </view>
+    </view>
+    <view id="cash-submit">
+       <button  class="save" formType="submit">确认提现</button>
+    </view>
+    <view class="tips">
+        一天只能提现一次,1~7个工作日到账
+    </view>
+ </form>   
+</view>
+
+<view class="sure_mask" hidden="{{sucess}}">
+    <view class="sure_delete">
+        <view class="text">{{text}}</view>
+        <view style="clear: both;"></view>
+        <view class="sure_btn" bindtap="makesure">
+        <image src="../../images/ok.png" alt=""></image>
+        </view>
+    </view>
+</view>

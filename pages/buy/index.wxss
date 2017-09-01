@@ -1,0 +1,444 @@
+/* pages/order/order_detail.wxss */
+page{
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+.userAddress{
+  height:60px;
+  width:90%;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto;
+  margin-top:40rpx;
+  padding-bottom: 40rpx;
+  overflow: hidden;
+}
+.userAddress .top{
+ color: #a4a4a4;
+ font-size: 12px;
+ padding: 10rpx 0;
+}
+.userAddress .top .name{
+   margin-right:40rpx; 
+   display: inline-block;
+   width: 18%;  
+}
+.userAddress .top .phone{
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+.moren{
+   display: inline-block;
+   width:16px;
+   height: 16px;
+   background-color: #fd0;
+   position: absolute;
+   top:22px;
+   left:-18px;
+   border-radius: 50%;
+}
+.userAddress .address_detail view{
+    color:#282828;
+    font-size:13px;
+    font-weight: bold;
+    padding-bottom: 20rpx;
+}
+.grey_part{
+  height: 10px;
+  background-color: #f6f6f6;
+}
+.handle{
+  width: 89.4%;
+  margin: 0 auto;
+  height: 150rpx;
+  padding: 0;
+}
+.handle image:nth-child(1){
+  width: 123rpx;
+  height: 95rpx;
+  float: left;
+  margin-top:26rpx;
+  vertical-align: middle;
+}
+.handle .info{
+   float: left;
+   height: 100%;
+   width: 65%;
+   margin: 38rpx 20rpx;
+   color: #282828;
+   font-size: 28rpx;
+   font-weight: bold;
+}
+.handle .info .time{
+   color: #a4a4a4;
+   font-size: 24rpx;
+   padding-top: 8px;
+   font-weight: 100;
+}
+.handle image:nth-child(3){
+  width: 19rpx;
+  height: 31rpx;
+  float: right;
+  margin-top: 59rpx;
+  vertical-align: middle;
+}
+.content{
+    width:100%;
+    /*margin: 20rpx 40rpx;*/
+    padding: 20rpx 40rpx;
+    float: left;
+    background: white;
+    box-sizing: border-box;
+}
+
+.content_title{
+    width: 100%;
+    height:60rpx;
+    line-height: 60rpx;
+    margin-bottom:16rpx;
+}
+.content_title .logo{
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+}
+.content_title view{
+    font-size:28rpx;
+    font-weight: bold;
+    line-height: 25px;
+    color: #ffdd00;
+    float: left;
+    margin-left: 20rpx;
+}
+.content_title .lead{
+    width:147rpx;
+    height:50rpx;
+    text-align: center;
+    color:#fff;
+    float: right;
+     font-size: 24rpx;
+     border-radius: 25rpx;
+}
+.join1{
+    background: #ffd400;
+}
+.join2{
+    background: #f6f6f6;
+     color:#aaa;  
+}
+.goodOne{
+    width: 100%;
+    height:115px;
+    float: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gainsboro;
+    background: white;
+}
+
+.content_img{
+    width: 95px;
+    height:95px;
+    float: left;
+    border-radius: 8px;
+    margin-right: 0.1rem;
+}
+
+.content_font{
+    width:65%;
+    height:.95rem;
+    float: right;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+}
+.content_font view{
+    width: 100%;
+    height:auto;
+    float: left;
+}
+.content_font view:nth-of-type(1) view{
+    width: 100%;
+    height: 60rpx;
+    margin-top: -20rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #282828;
+    float: left;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.content_font .color{
+    font-size:12px;
+    color: #A4A4A4;
+    margin-top: 0rpx;
+}
+.content_font .actions{
+    margin-top:12px;
+    height: 56rpx; 
+    line-height: 56rpx;
+}
+.content_font .actions .price{
+   font-size: 12px;
+   color: #ff5a5f;
+   float: left;
+   width: 40px;
+   height: 100%;
+}
+.content_font .actions .num_btn{
+    width:34rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    float: right;
+    margin-right:36rpx;
+    padding: 0;
+    color: #282828;
+    font-size: 22rpx;
+    text-align: center;
+    font-weight: bold;
+    background-color: #f6f6f6;
+}
+.expressInfo{
+  width:100%;
+  margin: 0 auto;
+}
+.expressInfo .about{
+   margin-bottom: 40rpx;
+   width:100%;
+   color: #A4A4A4;
+   font-size: 26rpx;
+}
+.expressInfo .about label{
+  padding-bottom:20rpx;
+  display: block;
+}
+.expressInfo .about .same{
+float: right;
+color: #282828;
+font-weight: bold;
+}
+.expressInfo textarea{
+  height: 0;
+  width:93%;
+  min-height: 60rpx;
+  background: #f6f6f6;
+  font-size:12px;
+  color: #282828;
+  padding: 20rpx;
+}
+.remindContainer{
+  position: fixed;
+  top:20rpx;
+  left:38rpx;
+  width: 89.5%;
+  background: #ffd400;
+  height: 124rpx;
+  line-height: 124rpx;
+  color:#fff;
+  font-size: 28rpx;
+  text-indent: 40rpx;
+  z-index: 999;
+}
+.remindContainer image{
+  float: right;
+  width: 40rpx;
+  height:40rpx;
+  vertical-align: middle;
+  margin: 40rpx;
+}
+.bottom_box{
+  width: 100%;
+  height: 120rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0px;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-top: 20rpx;
+   border-top: 1px solid gainsboro;
+  box-sizing: border-box;
+  background: white;
+  z-index: 1;
+}
+.bottom_box_left{
+  width: 50%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+.bottom_box_right{
+  width: 50%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+.bottom_box_left text{
+  width: auto;
+  height:80rpx;
+  display: block;
+  line-height: 80rpx;
+  font-size:32rpx;
+}
+.submit_btn{
+  width: 302rpx;
+  height: 80rpx;
+  border-radius: 45px;
+  background: #ffd400;
+  /*margin-top: 20rpx;*/
+  float: right;
+  text-align: center;
+  line-height: 80rpx;
+  color: white;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.fukuan{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 3;
+  background: rgba(0,0,0,0.4);
+}
+.pay_list{
+  width: 100%;
+  height: 543rpx;
+  float: left;
+  background:white;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.pay_list>image:nth-of-type(1){
+  width: 40rpx;
+  float: right;
+}
+.pay_post{
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-top: 80rpx;
+}
+.yue_list{
+  width: 100%;
+  height: 60rpx;
+  float: left;
+  margin-bottom: 40rpx;
+}
+.yue_list>image:nth-of-type(1){
+  width: 60rpx;
+  float: left;
+}
+.yue_list>text:nth-of-type(1){
+  height: 100%;
+  display: block;
+  float: left;
+  margin-left: 26rpx;
+  font-size: 26rpx;
+  color: #282828;
+  margin-top: 10rpx;
+  font-weight: bold;
+}
+.yue_list_right{
+  width: 30%;
+  height: 100%;
+  float: right;
+}
+.yue_list_right>text{
+  font-size: 26rpx;
+  color: #ff5a5f;
+}
+.yue_list_right>image{
+  width: 40rpx;
+  float: right;
+  margin-top: 6rpx;
+}
+.btns{
+  width: 100%;
+  height: 100rpx;
+  float: left;
+  background: #ffdd00;
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  font-size: 26rpx;
+  margin-top: 30rpx;
+}
+
+
+
+/*new　ａｄｄ*/
+.duihuanma{
+  width: 100%;
+  height: 113rpx;
+  background: #f6f6f6;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.duanhuanma_left{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.duanhuanma_right{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.duanhuanma_left text{
+  width: 100%;
+  height: 30rpx;
+  display: block;
+}
+.duanhuanma_left input{
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #282828;
+}
+.duanhuanma_right text{
+  width: 100%;
+  display: block;
+ text-align: right;
+ line-height: 73rpx;
+ color: #ffd400;
+ font-size: 29rpx;
+ font-weight: bold;
+}
+
+
+/*top*/
+.add_img{
+  width: 20%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+.add_img image{
+  width: 100%;
+}
+.add_font{
+  width: 80%;
+  height: 100%;
+  float: left;
+  padding-left: 50rpx;
+  box-sizing: border-box;
+}
+.add_font text{
+  font-size: 24rpx;
+  color: #a4a4a4;
+  line-height: 120rpx;
+}
+
+
+.padding_bottom{
+  width: 100%;
+  height: 120rpx;
+  float: left;
+}

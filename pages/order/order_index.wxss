@@ -1,0 +1,109 @@
+/* pages/order/order_index.wxss */
+.navbar{
+width:100%;
+height: 112rpx;
+line-height: 112rpx;
+margin: 0 auto;
+flex: none; 
+display: flex;
+border-top:1px solid #f7f7f7;
+}
+.navbar .item{
+  position: relative; 
+  flex: auto; 
+  text-align: center;
+  padding-bottom: 15px;
+  color: #aaa;
+  font-size:32rpx;
+  font-weight: bold;
+}
+.navbar .item.active{ 
+ color: #282828;
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 45%; 
+ right:25%;
+ width:30rpx;
+ height:6rpx; 
+ background: #282828; 
+}
+.grey_part{
+  height: 10px;
+  background-color: #f6f6f6;
+}
+.section{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.goodOne{
+    width: 100%;
+    overflow: hidden;
+    height:270rpx;
+    float: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid gainsboro;
+    background: white;
+}
+.content_img{
+    width: 95px;
+    height:95px;
+    float: left;
+    border-radius: 8px;
+    margin:40rpx;
+}
+.content_font{
+    width:62%;
+    height:100%;
+    float:left;
+    padding-top: 10px;
+}
+.content_font view{
+   width: 100%;
+   display: inline-block;
+}
+.content_font view .name {
+   width: 76%;
+   font-size: 26rpx;
+   color: #555;
+   margin-right:40rpx;
+}
+.content_font view .close{
+    width: 12%;
+    font-size: 26rpx;
+    color: #555;
+}
+.content_font .color{
+    font-size:12px;
+    color: #A4A4A4;
+    margin-top: 20rpx;
+}
+.content_font .actions{
+    margin-top:12px;
+    height: 56rpx; 
+    line-height: 56rpx;
+}
+.content_font .actions .price{
+   font-size: 12px;
+   color: #ff5a5f;
+   float: left;
+   width: 80px;
+   height: 100%;
+}
+.content_font .actions .num_btn{
+    width:34rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    float: right;
+    margin-right:36rpx;
+    padding: 0;
+    color: #282828;
+    font-size: 22rpx;
+    text-align: center;
+    font-weight: bold;
+    background-color: #f6f6f6;
+}

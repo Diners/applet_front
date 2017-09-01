@@ -1,0 +1,50 @@
+<form bindsubmit="formSubmit">
+<view class="ShippingAdress-content">
+    <input  name="user_id" value="{{user_id}}" hidden="true"/>
+    <input  name="address_id" value="{{address_id}}" hidden="true"/>
+    <view class="wrapper">
+        <view  class="name_input">收件人</view>
+        <input name="names" class="user_name" type="text" value="{{address.user_rec_name}}" disabled="{{isDo}}"/>
+    </view>
+    <view class="wrapper">
+        <view class="name_input"> 联系方式</view>
+        <input name="phones" class="mobileP" type="number"  value="{{address.user_rec_mobile}}" disabled="{{isDo}}"
+      pattern="((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)"
+        title="请输入正确号码" />
+    </view>
+    <view id="addressPicker" class="wrapper">
+        <view class="name_input">所在地区</view>
+        <input name="user_address" class="user_address"  type="text" value="{{address.user_address}}" focus="{{focus}}" bindfocus="open"
+               disabled="{{isDo}}"/>
+    </view>
+    <view class="wrapper">
+        <view class="name_input">详细地址</view>
+        <textarea  name="detail" class="user_detail_addr" 
+                 style="text-indent: 11px;" disabled="{{isDo}}">{{address.user_detail_addr}}</textarea>
+    </view>
+    <view class="default" bindtap="setDefault" data-value="{{address.user_imp}}">
+        设为默认地址 <image class="xuanzhong" src="{{address.user_imp==0?'../../images/uncheck.png':'../../images/check.png'}}"></image> 
+         <input name="user_imp" value="{{address.user_imp}}" hidden="true"/>
+    </view>
+
+    <view class="save" bindtap="toEdit" hidden="{{!isDo}}">编辑</view> 
+    <button class="save" formType="submit" hidden="{{isDo}}">确定</button>  
+</view>
+</form>
+<view wx:if="{{condition}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open" class="city-cancel">取消</view>
+      <view bindtap="open" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

@@ -1,0 +1,144 @@
+<!--pages/novel/novel.wxml-->
+<view class="page">
+<view class="user_cehua" style="left:-{{left}}px" bindtap="click_top">
+    <view class="user_cehua_top">
+    <image src="{{header_Img}}" mode="widthFix"></image>
+          <view class="user_cehua_center">
+            <text>{{userName}}</text>
+            <text>{{user_diy}}</text>
+          </view>
+          <view class="user_xinxi">
+          <view class="xinxi_one" style="margin-right:68rpx;">
+            <text>订阅</text>
+            <text>17</text>
+          </view>
+          <view class="border_right"></view>
+          <view class="xinxi_one" style="margin-left:68rpx;">
+            <text>粉丝</text>
+            <text>170</text>
+          </view>
+          </view>
+    </view>
+    <view class="user_cehua_bottom" >
+    <navigator url="../usercenter/index" class="user_list">
+        <image src="../../images/zazhi.png" mode="widthFix"></image>
+        <text>杂志</text>
+      </navigator>
+    <navigator url="../buy/order_index" class="user_list" >
+        <image src="../../images/goumai.png" mode="widthFix"></image>
+        <text>购买</text>
+      </navigator>
+      <!--url="../usercenter/agent"-->
+      <!--<navigator  class="user_list" bindtap="tips"> 
+            <image src="../../images/daili.png" mode="widthFix"></image>
+            <text>代理</text>
+          </navigator>-->
+          <view class="border_bottom"></view>
+          <navigator url="../account/index" class="user_list" >
+            <image src="../../images/yue.png" mode="widthFix"></image>
+            <text>余额</text>
+          </navigator>
+          <navigator url="../usercenter/edit" class="user_list">
+            <image src="../../images/shezhi.png" mode="widthFix"></image>
+            <text>设置</text>
+          </navigator>
+          <navigator url="../commity/index" class="user_list">   
+            <image src="../../images/shequ.png" mode="widthFix"></image>
+            <text>进入社区</text>
+          </navigator>
+          <view class="padding_bottom"></view>
+    </view>
+</view>
+<!--侧边栏结束-->
+<view class="User_box">
+  <image src="../../images/more_white.png" mode="widthFix" bindtap="Side_bar"></image>
+  <scroll-view  scroll-y="true"    bindscrolltoupper="pullDownRefresh"  bindscrolltolower="reachBottom">
+  <view class="prev_image" bindtap="toAddNovel"  data-idx="1" data-id="{{id1}}">
+  <view style="width:100%;height:100%;position:absolute;z-index:997;background:rgba(0,0,0,0.4)"></view>
+      <image src="{{model1.cover}}" style=" height: 590rpx;width:100%;" mode="aspectFill"></image>
+        <!--初始化-->
+      <view class="title" hidden="{{model1}}">
+        编辑模块
+        <image src="../../images/edit_white.png"></image>
+      </view>
+      <view class="title" hidden="{{!model1}}"  style="z-index:999;">
+       {{model1.title}}
+        <view class="name">{{model1.description}}</view>
+      </view>
+      <view class="{{isEdit==1?'addBorder':'hide'}}"></view> 
+   </view>
+
+   <view class="subcontent" style="border-bottom:1px solid #ececec;" bindtap="toAddNovel" data-idx="2" data-id="{{id2}}">
+      <view class="{{isEdit==1?'addBorder_sub':'hide'}}"></view> 
+       <view class="imgbox">
+         <image src="{{model2.cover}}" mode="aspectFill" style="z-index:999;height:168rpx"></image>
+       </view>
+       <!--初始化-->
+       <view class="subTitle"  hidden="{{model2}}">
+        编辑模块
+        <image src="../../images/pen.png"></image>
+      </view>
+      
+       <view class="subTitle"  hidden="{{!model2}}">
+         {{model2.title}} 
+         <view class="name">{{model2.description}}</view>
+      </view>
+   </view>
+   <view class="subcontent" bindtap="toAddNovel"  data-idx="3" data-id="{{id3}}">
+     <view class="{{isEdit==1?'addBorder_sub':'hide'}}"></view> 
+     <view class="imgbox">
+         <image src="{{model3.cover}}" mode="aspectFill" style="z-index:999;"></image>
+       </view>
+       <!--初始化-->
+     <view class="subTitle"  hidden="{{model3}}" >
+         编辑模块
+        <image src="../../images/pen.png"></image>
+      </view> 
+      <view class="subTitle"  hidden="{{!model3}}">
+        {{model3.title}} 
+         <view class="name">{{model3.description}}</view>
+      </view>
+   </view>
+   
+ 
+    <view style="width:auto;float:left;float:right;margin-right:40rpx;position:fixed;bottom:40rpx;right:40rpx">
+       <image src="../../images/arrowPrev.png" 
+              style="width:50rpx;float:left;" class="Next" mode="widthFix" bindtap="toPrev"></image>
+       <image src="../../images/arrowNext.png" 
+             style="width:50rpx;float:left;margin-left:30rpx;" class="Next1" mode="widthFix" bindtap="toNext"></image>
+    </view>
+    
+   <view class="deploy" style="position:fixed;bottom:40rpx;left:40rpx" hidden="{{Issave1}}"> 
+    <image src="{{isDeloy==0?'../../images/open.png':'../../images/hide.png'}}" bindtap="openActions"  animation="{{animation}}" 
+             class="{{isEdit==1?'hide':''}}"></image> 
+      <image src="../../images/open.png" class="{{isDeloy!=1?'hide':''}}" bindtap="AddNext"></image>
+      <image src="../../images/editModel.png" class="{{isDeloy!=1?'hide':''}}" bindtap="rewrite"></image>
+      <image src="../../images/del.png" class="{{isDeloy!=1?'hide':''}}" bindtap="delThis"></image>
+      <image src="../../images/ercode.png" class="{{isDeloy!=1?'hide':''}}" bindtap="toErcode"></image> 
+      <image src="../../images/save.png" class="{{isEdit==1?'':'hide'}}" bindtap="saveModel"></image>
+   </view>
+   <view class="save" style="width:30%;padding-left:40rpx;box-sizing: border-box;margin-top:20rpx;" hidden="{{Issave}}">
+   <image src="{{imgList}}" mode="widthFix" ></image>
+   <image src="../../images/xie.png" style="margin-left:12rpx" mode="widthFix" ></image>
+    <text style="float:left;text-align:left">{{shoucang}}</text>
+   </view>
+</scroll-view>
+</view>
+  <view style="width:100%;height:100%;position:fixed;background:rgba(0,0,0,0.5)"hidden="{{hide}}" ></view>
+ </view> 
+ <!--page结束-->
+<view class="sure_mask" hidden="{{isDel}}">
+    <view class="sure_delete">
+        <view class="text">确认删除此页？</view>
+        <view style="clear: both;"></view>
+        <view class="del_btn" bindtap="closeDel"><image src="../../images/close.png" alt=""></image></view>
+        <view class="sure_btn" bindtap="sureDel"><image src="../../images/ok.png" alt=""></image></view>
+    </view>
+</view>
+<view class="Tips" hidden="{{ishides}}">
+  <view class="Tips_son">
+    <text>{{Tips}}</text>
+    <image src="../../images/remind.png" mode="widthFix"></image>
+  </view>
+</view>
+

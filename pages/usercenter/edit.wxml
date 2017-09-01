@@ -1,0 +1,74 @@
+<!--pages/usercenter/edit.wxml-->
+<form bindsubmit="formSubmit">
+    <view class="mui-content">
+        <view class="subContainer">
+            <image src="{{userInfo.avatarUrl}}" class="head_image"></image>
+            <view class="change">
+               <image src="../../images/changeImg.png"></image>       
+            </view>
+        </view>
+        <input  type="text" hidden="true" value="{{user.user_id}}" name="user_id"/>
+        <view class="wrapper">
+            <view class="name_input">昵称</view>
+            <input type="text" name="user_name" value="{{user.user_name}}" disabled="{{isDo}}"/>
+        </view>
+
+        <view class="wrapper" bindtap="showSex">
+            <view class="name_input">性别</view>
+            <input type="text"  name="user_sex"  value="{{user.user_sex==1?'女':'男'}}"  disabled="true"/>
+        </view>
+
+        <view class="wrapper">
+            <view class="name_input">一句话描述</view>
+            <input type="text" name="user_diy" value="{{user.user_diy}}"  disabled="{{isDo}}"/>
+        </view>
+        
+        <view class="wrapper" style="position: relative;" bindtap="changePhone">
+            <view class="name_input">手机号</view>
+            <view class="click-hide"  hidden="{{isDo}}">更换</view>
+            <input type="number" name="user_moblie"  value="{{user.user_moblie}}" disabled="true" placeholder="请填写你的手机号...."/>
+        </view>
+
+        <view class="wrapper" bindtap="toAddress">
+            <view class="name_input">收货地址</view>
+            <input type="text"  value="管理收货地址"  disabled="true"/>
+        </view>
+    </view>
+    <button  bindtap="tochange" class="save" hidden="{{!isDo}}">编辑</button>
+    <button  class="save" hidden="{{isDo}}" formType="submit">完成</button>
+</form>
+
+<view class="sure_mask" hidden="{{isSex}}">
+    <view class="sure_delete">
+        <view class="sexAbout">
+           <view class="man" bindtap="chooseSex">
+           <image src="{{sex==0?'../../images/check.png':'../../images/uncheck.png'}}"></image>
+           男</view>
+           <view class="female" bindtap="chooseSex">
+           <image src="{{sex==1?'../../images/check.png':'../../images/uncheck.png'}}"></image>
+           女</view>
+        </view>
+        <view style="clear: both;"></view>
+        <view class="del_btn" bindtap="closeSex"><image src="../../images/sex_close.png" mode="widthFix"></image></view>
+        <view class="sure_btn" bindtap="changeSex"><image src="../../images/sex_right.png" mode="widthFix"></image></view>
+    </view>
+</view>
+
+<view class="phone_mask" hidden="{{isphone}}">
+   <view class="phoneContainer">
+        <view style="height:1px;width:100%;"></view>
+        <view class="wrapper">
+            <view class="name_input">号码</view>
+            <input type="number" name="myphone" bindblur="getphoneValue"/>
+        </view>
+       <view class="wrapper" style="position: relative;">
+            <view class="name_input">验证码</view>
+            <view class="click-hide" bindtap="sendMess">{{sendText}}</view>
+            <input type="number" class="mobilephone" name="yzm" bindblur="getcodeValue"/>
+        </view>
+         <view class="del_btn" bindtap="closePhone"><image src="../../images/sex_close.png" mode="widthFix"></image></view>
+         <view class="sure_btn" bindtap="sureChangePhone">
+            <image src="../../images/sex_right.png" mode="widthFix"></image>
+         </view>
+   </view>
+</view>

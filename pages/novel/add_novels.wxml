@@ -1,0 +1,23 @@
+<!--pages/novel/add_novels.wxml--> 
+<form bindsubmit="formSubmit">
+<view class="select_img"  bindtap="chooseImg">
+      <image src="../../images/surface.png" mode="widthFix" hidden="{{isChoose}}" class="addImg"></image>
+      <image src="{{imgSelected}}" hidden="{{!isChoose}}" class="fixImg"  mode="widthFix"></image>
+</view>
+  <view class="section">
+  <!--bindchange="getTitle"-->
+    <input placeholder="取一个有趣的标题吧..." placeholder-style="color:#a4a4a4" style="color:#282828" value="{{title}}" name="title"/>
+  </view>
+  <view class="section">
+  <!--bindchange="getDescription"-->
+      <textarea placeholder="描述..." placeholder-style="color:#a4a4a4" style="color:#282828"  value="{{note}}" name="desc"/>
+  </view>
+  <view class="section">
+       <view class="describe" bindtap="getDescriptionImage">
+           <image src="../../images/subAdd.png"></image>
+          {{unselected}}
+       </view>  
+       <button class="publish1" formType="submit">确定</button>
+      <!--<image src="../../images/finish.png" class="publish" bindtap="submit"></image>  -->
+  </view>  
+</form>

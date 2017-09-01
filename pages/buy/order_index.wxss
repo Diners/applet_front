@@ -1,0 +1,163 @@
+/* pages/order/order_index.wxss */
+.navbar{
+width:100%;
+height: 112rpx;
+line-height: 112rpx;
+margin: 0 auto;
+flex: none; 
+display: flex;
+border-top:1px solid #f7f7f7;
+}
+.navbar .item{
+  position: relative; 
+  flex: auto; 
+  text-align: center;
+  padding-bottom: 15px;
+  color: #aaa;
+  font-size:32rpx;
+  font-weight: bold;
+}
+.navbar .item.active{ 
+ color: #282828;
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 45%; 
+ right:25%;
+ width:30rpx;
+ height:6rpx; 
+ background: #282828; 
+}
+.grey_part{
+  height: 10px;
+  background-color: #f6f6f6;
+}
+.section{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.content{
+    width: 100%;
+    float: left;
+    background: white;
+    border-bottom: 10px solid #f6f6f6;
+}
+.content_title{
+    width: 89.4%;
+    margin:40rpx 40rpx 0 40rpx;
+    height:50rpx;
+    line-height: 50rpx;
+}
+.content_title .logo{
+  width: 50rpx;
+  height:50rpx;
+  margin-top: 5rpx;
+  float: left;
+  border-radius: 50%;
+}
+.content_title view{
+    font-size:28rpx;
+    font-weight: bold;
+    line-height:50rpx;
+    color: #ffdd00;
+    float: left;
+    margin-left: 20rpx;
+}
+.content_title .lead{
+    width: 19rpx;
+    margin-top: 10rpx;
+    height:31rpx;
+    vertical-align: middle;
+    float: right;
+}
+.goodOne{
+     width: 89.4%;
+     margin:0 40rpx;
+    overflow: hidden;
+    height:270rpx;
+    float: left;
+    border-bottom: 1px solid #f6f6f6;
+    background: white;
+    padding: 0;
+}
+.content_img{
+    width: 95px;
+    height:95px;
+    float: left;
+    border-radius: 8px;
+    margin:40rpx;
+    margin-left: 0;
+}
+.content_font{
+    width:67%;
+    height:100%;
+    float:right;
+    padding-top: 10px; 
+}
+.content_font .infoBox{
+   margin-top: 20rpx;
+   width: 100%;
+   display: inline-block;
+}
+.content_font .infoBox .name {
+   width:58%;
+   font-size: 26rpx;
+   color: #555;
+   margin-right:40rpx;
+   font-weight: bold;
+   margin-top: 20rpx;
+   display: inline-block;
+  overflow: hidden; /*自动隐藏文字*/
+  text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+  white-space: nowrap;
+}
+.content_font .infoBox .close{
+    font-size: 26rpx;
+    color: #555;
+    font-weight: bold;
+    float: right;
+    margin-right: 40rpx;
+    margin-top: 20rpx;
+}
+.content_font .color{
+    font-size:12px;
+    color: #A4A4A4;
+    margin-top: 20rpx;
+}
+.content_font .actions{
+    height: 56rpx; 
+    line-height: 56rpx;
+    margin-top:20rpx;
+}
+.content_font .actions .price{
+   font-size:12px;
+   color: #ff5a5f;
+   float: left;
+   width: 80px;
+}
+.order_mess{
+ text-align: right;
+ height: 70rpx;
+ line-height:70rpx;
+ color: #282828;
+ font-size: 12px;
+ padding-right: 40rpx;
+}
+.content_font .actions .num_btn{
+    width:34rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    float: right;
+    margin-right:40rpx;
+    margin-top:10rpx;
+    padding: 0;
+    color: #282828;
+    font-size: 22rpx;
+    text-align: center;
+    font-weight: bold;
+    background-color: #f6f6f6;
+}

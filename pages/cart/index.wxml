@@ -1,0 +1,40 @@
+
+<view class="cartContainer">
+  <view class="content" wx:for="{{cart_list}}" wx:key="brand_name" >
+    <view class="content_title" >
+    <image src="{{item.brand.brand_img}}" class="logo"></image>
+    <view>{{item.brand.brand_name}}</view>
+     <image src="../../images/back_right.png" class="lead"></image>
+    </view>
+       <view class="goodOne" wx:for="{{item.goods}}" wx:for-item="goods" wx:key="cart_id">
+        <image src="{{goods.img}}" class="content_img"></image>
+          <view class="content_font">
+            <view class="titles">{{goods.title}}</view>
+                    <image class="close" data-id="{{goods.cart_id}}" src="../../images/cart_close.png" bindtap="OkTap"></image>
+                   <view class="color">{{goods.colour}}  {{goods.size}}</view>
+                   <view class="actions">
+                    <view class="price">￥{{goods.price}}</view>
+                    <view class="num_btn">
+                       <view class="add" data-index="{{index}}" data-id="{{goods.brand_id}}"  bindtap="addNum">+</view>
+                        <view class="num">{{goods.num}}</view>
+                        <view class="jian" data-index="{{index}}" data-id="{{goods.brand_id}}" bindtap="reduce">-</view>
+                    </view>
+                   </view> 
+            </view>
+      </view>
+  </view>
+  <view style="width:100%;height:70rpx;float:left"></view>
+  <view class="bottom_flex">
+    <view>合计:￥<text>{{num1}}</text><text>不含运费</text></view>
+    <view class="Bst" bindtap="Settlement">结算</view>
+  </view>
+</view>
+<view class="quan" hidden="{{Ishide}}">
+  <view class="error" style="top:{{top}}px;left:{{left}}rpx">
+  <text>确定要删除这个商品吗？</text>
+  <view class="img_list">
+   <image src="../../images/close.png" mode="widthFix"bindtap="hide" ></image>
+  <image src="../../images/ok.png" mode="widthFix"  bindtap="delet"></image>
+  </view>
+  </view>
+</view>

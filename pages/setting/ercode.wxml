@@ -1,0 +1,26 @@
+<!--pages/setting/ercode.wxml-->
+<view class="mui-content">
+    <view class="bigBox" style="width:320px;height:320px;background: url('../../images/bgercode.png'); background-size:contain;background-repeat: no-repeat;">
+        <view class="about_user">
+            <image class="userimg" src="{{userInfo.avatarUrl}}"></image>
+            <view>
+                <view class='username'>{{userInfo.nickName}}</view>
+                <view class="novel">快来看我的微杂志吧</view>
+            </view>
+        </view>
+        <view class="about_code">
+           <image class="erweima" src="http://qr.topscan.com/api.php?&w=800&text=http://www.jia1n1.com/index.php/index/index?sign={$new_fenxiang}"  bindlongtap="longtaps"></image>
+        </view>
+    </view>
+    <view class="changan">- 点击看大图,保存分享识别二维码 -</view>
+</view>
+
+<view class="erContainer" hidden="{{isPreview}}" bindtap="close">
+    <image src="../../images/erwe.png" ></image>
+</view>
+<view class="Tips" hidden="{{ishides}}">
+  <view class="Tips_son">
+    <text>{{Tips}}</text>
+    <image src="http://qr.topscan.com/api.php?&w=800&text=http://www.jia1n1.com/index.php/index/index?sign={$new_fenxiang}" mode="widthFix"></image>
+  </view>
+</view>

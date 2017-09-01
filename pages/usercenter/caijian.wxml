@@ -1,0 +1,14 @@
+
+<view class="box">
+    <view class="box_son1">
+    <view style="margin-left:{{lefts}}rpx;height:auto;float:left;width:auto;position:absolute;top:{{tops}}rpx">
+      <image src="{{img}}" style="width:{{width}}px;transform:scale({{scale}})"  bindtouchstart="start" bindtouchmove="move" bindtouchend="end" mode="{{model}}"></image>
+      </view>
+    </view>
+    <view class="box_son" style="width:{{width}}px;height:{{width}}px;top:{{top}}px" catchtouchstart="start" catchtouchmove="move" catchtouchend="end">
+      <view style="width:100%;height:100%;background:rgba(0,0,0,.2);"></view>
+    </view>
+    <view class="finsh">
+      <image src="../../images/finish.png" bindtap="upload" ></image>
+    </view>
+</view>

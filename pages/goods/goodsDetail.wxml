@@ -1,0 +1,105 @@
+<!--pages/goods/goodsDetail.wxml-->
+<view class="header_btn">
+        <image src="../../images/backss.png" mode="widthFix" bindtap="back"></image>
+        <image src="../../images/cart.png" mode="widthFix" bindtap="cart"></image>
+</view>
+<scroll-view class="content" style="position:relative">
+  <swiper autoplay="true" circular="true" indicator-dots="true" indicator-active-color='#ffd460'>
+     <block >
+    <swiper-item wx:for="{{goods_images}}" wx:key="{{index}}">
+      <image src="{{item}}" class="slide-image" mode="widthFix" />
+    </swiper-item>
+  </block>
+     <!--<view class="yuan" style="right:60rpx">
+     <image src="../../images/soucang_active.png" ></image>
+  </view> -->
+  </swiper>
+</scroll-view>
+<!--图片以下的内容合集-->
+<view class="content2">
+  <view class="content_title" >
+    <text>{{goods_name}}</text>
+    <text>卖出：{{goods_sell_num}}</text>
+    <view class="content_title_list">
+      <text>￥{{goods_price}}</text>
+      <view >
+        <image src="../../images/baozhang.png" mode="widthFix"></image>
+      </view>
+    </view>
+    <!--头像简介框-->
+    <view class="head_img">
+      <view class="head_img_div">
+      <image src="{{brand_img}}" mode="widthFix"></image>
+      </view>
+      <text>{{brand_name}}</text>
+      <text>{{brand_label}}</text>
+    </view>
+  </view>
+</view>
+<view class="heng"></view>
+<!--黑色横条以下的内容-->
+<view class="content3">
+  <image src="../../images/xiangqing.png"  mode="widthFix"></image>
+  <view class="xiangqing_list">
+    <image src="../../images/ban.png"></image>
+    <view class="list_content" wx:for="{{goods_standard}}" wx:key="standard_id">{{item.color}}</view>
+  </view>
+   <view class="xiangqing_list">
+    <image src="../../images/chi.png"></image>
+   <view class="list_content" wx:for="{{goods_standard}}" wx:key="goods_id">{{item.size}}</view>
+  </view>
+  <!--尺寸下面的内容-->
+    <view class="list">
+     <text>{{brand_desc}}</text>
+     <!--<text>.家干啊美女新</text>
+     <text>.家干啊美女新</text>-->
+    </view>
+    <view class="yin"></view>
+</view>
+<view class="bottom">
+<view class="bottom_left" data-id="1" bindtap="IsHIDE">
+<image src="../../images/add_cart.png"  mode="widthFix"></image>
+<text>加入购物车</text>
+</view>
+<view class="bottom_right" data-id="2" bindtap="IsHIDE" >
+<text>立即购买</text>
+</view>
+</view>
+<view class="guige" hidden="{{Ishide}}" wx:for="{{goods_standard}}" wx:key="standard_id">
+<view class="guige_bottom">
+<view class="bottom_img">
+<image src="{{starnd_img}}"></image>
+<image src="../../images/black_close.png" mode="widthFix" bindtap="Close_display"></image>
+</view>
+<text>￥{{goods_price}}</text>
+<view class="bottom_content">
+<text>规格</text>
+<view class="bottom_list"  >
+      <view wx:for="{{goods_standard}}" wx:key="standard_id" data-starnd="{{item.standard_id}}" data-price="{{item.price}}" class="{{indexs==indexs1?'active':'list_contents'}}"  bindtap="adctiveTap">
+        {{item.color}} {{item.size}}
+      </view>
+      </view>
+      <!--bottom_list end!!!-->
+          <view class="buy">
+          <text>购买数量</text>
+          <view class="add_list">
+          <view class="add_content">
+          <image src="../../images/jians.png" mode="widthFix" bindtap="reduceTap"></image>
+          <input type="number" disabled="true"  value="{{numbers}}" confirm-type="done" />
+          <image src="../../images/adds.png" mode="widthFix" bindtap="addTap"></image>
+            </view>
+            </view>
+          </view>
+          <view class="Btn" bindtap="submit">
+          确认
+          </view>
+     </view>
+   </view>
+</view>
+
+<view class="Tips" hidden="{{ishides}}">
+  <view class="Tips_son">
+    <text>{{Tips}}</text>
+    <image src="../../images/remind.png" mode="widthFix"></image>
+  </view>
+</view>

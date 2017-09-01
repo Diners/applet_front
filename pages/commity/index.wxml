@@ -1,0 +1,20 @@
+<!--pages/commity/index.wxml-->
+<view class="commityContainer" style="height:100%;">
+  <scroll-view scroll-y="true" style="height: {{windowHeight}}px; width: {{windowWidth}}px;"   bindscrolltoupper="pullDownRefresh"  bindscrolltolower="reachBottom">
+    <view class="commity_content">
+            <navigator url="/pages/commity/detail?commityId={{item.id}}" class="item_clearfix" wx:for="{{commityList}}" wx:key="id" >                
+                <view class="aboutUser">
+                   <image src="{{item.img}}" class="userUrl"></image>
+                   <view class="usertext">
+                      <view class="title">{{item.title}}</view>
+                      <view class="focus">{{item.attention}}人关注</view>
+                   </view>
+               </view>
+               <view class="imgList">
+                  <image src="{{item.article_img}}"  wx:for="{{item.article_list}}" wx:key="article_id"></image>
+              </view>
+           </navigator>    
+    </view>
+   </scroll-view>        
+</view> 
+

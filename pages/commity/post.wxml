@@ -1,0 +1,16 @@
+<!--pages/commity/post.wxml-->
+<form>
+   <textarea  placeholder="这一刻,我想说..." class="note" placeholder-style="color:#aaa;" bindblur="getValue"/>
+   <view hidden="{{char.length!=0}}" class="addImg">
+     <image src="../../images/add.png" bindtap="uploadFile"></image>
+   </view>
+    <view class="add">
+        <block wx:for="{{char}}" wx:key="unique">
+              <image src="{{item}}" class="previewImg"></image>
+        </block> 
+        <view hidden="{{char.length==0||char.length==6}}">
+           <image src="../../images/addImage.png" bindtap="chooseAgain"></image>
+         </view>
+    </view>
+   <image src="../../images/post.png" class="upload"  bindtap="submit"></image>
+</form>

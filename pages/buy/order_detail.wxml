@@ -1,0 +1,77 @@
+<!--pages/order/order_detail.wxml-->
+<view class="userAddress">
+   <i class="{{user_imp==1?'moren':''}}"></i>              
+    <view class="top">
+         <view class="name">{{order.user_rec_name}}</view>
+         <view class="phone">{{order.user_rec_mobile}}</view>
+     </view>
+     <view class="address_detail">
+        <view>{{order.user_address}}{{order.user_detail_addr}}</view>
+     </view>    
+</view>
+<view class="grey_part"></view>       
+<view class="handle" hidden="{{type==2}}"  data-id="{{order.transport_number}}" bindtap="checkExpress">
+    <image src="../../images/express.png"></image>
+    <view class="info">
+       <view>您的订单开始处理</view>
+       <view class="time">2017-7-21 16：05</view>
+    </view>
+    <image src="../../images/back_right.png"></image>
+</view>
+<view class="grey_part" hidden="{{type==2}}"></view>
+<view class="content {{type==2?'h2':''}}">
+    <view class="content_title">
+        <image src="{{order.brand_logo}}" class="logo"></image>
+        <view>{{order.brand_name}}</view>
+        <view class="lead {{publish==0?'join1':'join2'}}" hidden="{{type!=2}}" 
+              bindtap="follow" value="{{publish}}">{{followed?'已提醒发货':'提醒发货'}}</view>
+        <view class="lead {{accpect==0?'join1':'join2'}}" hidden="{{type!=3}}"
+              bindtap="accpect" value="{{accpect}}">{{toAccpect?'已确认收货':'确认收货'}}</view>
+        <view class="isAccpect" hidden="{{type!=4}}">已确认收货</view>
+    </view>
+    <view class="goodOne" wx:for="{{goods}}">
+        <image src="{{item.goods_img}}" class="content_img"></image>
+        <view class="content_font"> 
+            <view class="good_name">{{item.title}}</view>
+            <view class="color">{{item.colour}}</view>
+            <view class="actions">
+                <view class="price">￥{{item.price}}</view>
+                <view class="num_btn">x{{item.num}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view style="clear:both;"></view>
+<view class="expressInfo">
+  <view class="about" hidden="{{type!=4}}">
+        订单号
+        <view class="same">{{order.order_id}}</view>
+    </view>
+    <view class="about">
+        邮费(满40包邮)
+        <view class="same">包邮</view>
+    </view>
+    <view class="about">
+      小计
+      <view class="same">￥{{order.total_price}}</view>
+    </view>
+    <view class="about">
+        <label>备注</label>
+         <textarea  class="note" placeholder-style="color:#aaa;" value="{{order.remark}}"/>
+    </view>
+</view>
+
+<!--提醒发货-->
+<view class="remindContainer" hidden="{{isRemind}}">
+  <image src="../../images/remind.png"></image>
+  <view>提醒发货成功！一天之内提醒一次。</view>
+</view>
+
+<view class="sure_mask" hidden="{{isAccpect}}">
+    <view class="sure_delete">
+        <view class="text">是否确认收货？</view>
+        <view style="clear: both;"></view>
+        <view class="del_btn" bindtap="closeDel"><image src="../../images/close.png" ></image></view>
+        <view class="sure_btn" bindtap="sureAccept"><image src="../../images/ok.png"></image></view>
+    </view>
+</view>

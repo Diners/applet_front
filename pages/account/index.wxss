@@ -1,0 +1,200 @@
+page{
+  margin: 0;
+  padding: 0;
+}
+.mui-bar-nav .cost {
+  margin-top: 164rpx;
+  
+}
+.cost .earn{
+    width: 26%;
+    text-align: center;
+    color: #fff; 
+    font-size: 22rpx; 
+    font-weight: bolder;
+    margin-top:164rpx;
+    float: left;
+}
+.cost .spend{
+    width: 26%;
+    text-align: center;
+    color: #fff;  
+    font-weight: bolder;
+    margin-top:88rpx;
+    float: left;
+    font-size: 22rpx;
+}
+.cost .earn view, .cost .spend view{
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 24rpx;
+  padding-top:10rpx;
+}
+.cost .all {
+    width: 40.5%;
+    margin: 0 10px;
+    margin-top:134rpx;     
+    height: 90px;
+    text-align: center;
+    font-size:14px;
+    font-weight: bold;
+    float: left;
+}
+
+.line {
+    float: left;
+    width: 1px;
+    height: 15px;
+    background-color: #fff;
+    vertical-align: middle;
+    margin-top:164rpx;
+}
+.mui-bar-nav {
+    height: 255px;
+    margin-top: -80px;
+}
+
+.mui-bar-nav navigator {
+    float: right;
+    font-size:28rpx;
+    color: #282828;
+    height: 34rpx;
+    line-height: 34rpx;
+    font-weight: bold;
+    margin: 40rpx 40rpx 0 0;
+}
+
+.mui-bar-nav navigator image {
+    width: 33rpx;
+    height: 34rpx;
+    float: right;
+    vertical-align: middle;
+    margin-left: 16rpx;
+}
+
+.mui-bar-nav view {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+.mui-table-view {
+    margin-left: 102rpx;
+    width: 78.4%;
+    position: relative;
+}
+.mui-table-view-cell{
+  width: 100%;
+  height:160rpx;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.mui-media-body{
+  width: 60%;
+  display: inline-block;
+  margin-top: 35rpx;
+}
+.mui-table-view .mui-media-object.mui-pull-left {
+    width: 90rpx;
+    height: 90rpx;
+    margin: 37rpx;
+    margin-left: 0;
+}
+.mui-btn-red {
+    background: #ffd102;
+    width: 60px;
+    text-align: center;
+}
+.type .jinzhang {
+    color: #ffdd00;
+    font-size: 14px;
+    float: right;
+    margin-top:60rpx;
+    font-weight: bolder;
+}
+
+.type .chuzhang {
+   color: #68bf7b;
+    font-size: 14px;
+    float: right;
+    margin-top:60rpx;
+    font-weight: bolder;
+}
+.type .shoukuan {
+   color: #ff5622;
+    font-size: 14px;
+    float: right;
+    margin-top:60rpx;
+    font-weight: bolder;
+}
+.mui-media-body h4 img {
+    width: 18px;
+    position: relative;
+    top: 3px;
+}
+.point {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 34px;
+    left: -52rpx;
+    box-shadow: 0 10rpx 20rpx rgba(255, 221, 0, .1);
+}
+.mui-media-body view:nth-of-type(1) {
+    font-size: 14px;
+    color: #131313;
+    width: 80%;
+    height: 21px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top:10rpx;
+}
+
+.mui-media-body view:nth-of-type(2) {
+    font-size: 12px;
+    color: #c5c5c5;
+}
+
+.mui-media-body view:nth-of-type(2) image {
+    width: 12px;
+    position: relative;
+    left: 4px;
+    top: 1px;
+    margin-right: 16px;
+}
+
+.mui-table-cell .mui-pull-left {
+    border-radius: 5px;
+    float: left;
+}
+
+
+.mui-table-view-cell .mui-slider-right .mui-btn {
+    padding: 15px;
+    color: #131313;
+    font-size: 14px;
+}
+
+.mui-pull-left {
+    float: left;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.nolist {
+    text-align: center;
+    margin-top:60px;
+}
+
+.nolist image {
+    width: 227rpx;
+    height: 272rpx;
+}
+
+.mui-table-view:after {
+    background-color: #fff;
+}

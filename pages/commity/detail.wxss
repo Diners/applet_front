@@ -1,0 +1,298 @@
+/* pages/commity/detail.wxss */
+page{
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.head .userUrl{
+  width: 19.4%;
+  height: 73px;
+  border-radius:6px; 
+  margin: 20px 15px 20px 20px;
+  float: left;
+}
+.head .ourText{
+  height: 73px;
+  width: 65.8%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  float: left;
+  line-height: 150%;
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 25px;
+}
+.head .join_us{
+  width: 17.8%;
+  height:29px;
+  line-height: 29px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size:13px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  border-radius:15px; 
+}
+.join1{
+    background: #ffd400;
+}
+.join2{
+    background: #b3badb;
+}
+.head .navbar{
+width: 89.3%;
+color: #aaa;
+font-size: 14px;
+margin: 0 auto;
+flex: none; 
+display: flex;
+}
+.head .navbar .item{
+  position: relative; 
+  flex: auto; 
+  text-align: center;
+  padding-bottom: 15px;
+  /*border:1px solid red;*/
+}
+.navbar .item.active{ 
+ color: #ffd400; 
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 41.5%; 
+ right:25%;
+ width:25px;
+ height:6rpx; 
+ background: #ffd400; 
+} 
+.grey_part{
+  height: 10px;
+  background-color: #f6f6f6;
+}
+.detail_content{
+  width: 100%;
+}
+.detail{
+  width: 89.3%;
+  border-bottom:1px solid #f7f7f7;
+  margin: 0 auto;
+}
+        .detail_content  .article_name{
+            padding:0 6px;
+            display: inline-block;
+            color: #fd0;
+            font-size: 11px;
+            font-weight: bold;
+            line-height:150%;
+            border: 1px solid #fd0;
+            text-align: center;
+            border-radius: 9px;
+            margin-left:10px;
+        }
+        .detail_content .article_title {
+            width:100%;
+            line-height: 150%;
+            color: #282828;
+            font-size: 20px;
+            margin: 18px;
+        }
+        .introduce{width: 100%;}
+        .introduce .article_img{
+            display: inline-block;
+            vertical-align: middle;
+            /*max-width:100%;
+            margin: 0 auto;
+            margin-top: 25px;*/
+              width: 29%;
+              height:209rpx;
+              margin:5px;
+              border-radius: 6px;
+        }
+        .introduce .text{
+            width:88%;
+            line-height: 150%;
+            color: #282828;
+            font-size:12px;
+            margin: 0 auto;
+            background-color: #f6f6f6;
+            padding: 20px;
+            border-radius:12rpx; 
+        }
+        .user_created{
+            width: 100%;
+            margin:0 auto;
+            margin-top: 20px;
+        }
+        .user_created .pull-left{
+           display: inline-block;
+        }
+        .user_created  .pull-left:nth-child(1){
+            margin-right:12px;
+        }
+        .user_created .pull-left image{
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+        }
+        .user_created  .pull-left .author{
+            color: #ffd400;
+            font-size: 13px;
+            display: block;
+            height: 22px;
+            line-height:22px;
+        }
+        .user_created  .pull-left .time{
+            color: #cdcdcd;
+            font-size: 11px;
+            display: block;
+            height: 19px;
+            line-height: 19px;
+        }
+        .like{
+          margin: 20px 0;
+        }
+        .like image{
+          display: inline-block;
+        }
+        .like .loved{
+             width: 9px;
+             height: 8px;
+             vertical-align: middle;
+        }
+        .like text{
+          padding-left: 5px;
+          color: #aaa;
+          font-size: 10px;
+        }
+        .isCollect{
+          float: right;
+          width: 15px;
+          height:14px;
+          vertical-align: middle;
+        }
+        .isReport{
+          float: right;
+          width: 13px;
+          height:3px;
+          vertical-align: middle;
+          margin-top:16px;
+        }
+        .mian{
+          width: 100%;
+          border-bottom:10px solid #f7f7f7;
+        }
+       .mian .mui-navigate-right{
+         float: right;
+         color: #aaa;
+         font-size: 12px;
+         font-weight: bold;
+         margin:10px;
+       }
+       .mian .mui-control-item image{
+         width:90px;
+         height: 90px;
+         border-radius:6px;
+         margin:0 10px;
+       }
+       .mian .mui-control-item view{
+         text-align: center;
+         font-size: 11px;
+       }
+       .money{
+         color:#ff5a5f;     
+       }
+       .title{
+        color:#282828;
+        overflow: hidden;
+        text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+        white-space: nowrap;/*强制不换行*/ 
+       }
+       .topic{
+         position: fixed;
+         right: 20px;
+         bottom:36px;
+         width:67px;
+         height:67px; 
+       }
+       .topic image{
+         width:67px;
+         height:67px; 
+         vertical-align: middle; 
+       }
+       .box{
+         position: relative;
+       }
+       .report_mask{
+            position: absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background-color: rgba(0,0,0,.5);
+            margin: 0;
+            padding: 0;
+            z-index:9999;
+       }
+      .reportContainer{
+         width: 100%;
+         height:300rpx;
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         z-index: 2000;
+         background-color: #fff;
+       }
+       .reportContainer image{
+         width: 16px;
+         height: 16px;
+         vertical-align: middle;
+         display: block;
+         margin:46rpx;
+       }
+       .reportContainer view{
+          height: 32px;
+         line-height: 32px;
+          margin:65rpx 46rpx;
+       }
+       .sure_mask{
+            position: absolute;
+            top:0;
+            left: 0;
+            width:100%;
+            height:100%;
+            background-color: rgba(0,0,0,.5);
+            margin: 0;
+            padding: 0;
+            z-index:9999;
+        }
+        .sure_mask .sure_delete{
+            background-color:#ff3500;
+            width: 80.5%;
+            margin: 60% auto; 
+            height: 124px;
+        }
+        .sure_mask .sure_delete .text{
+            color: #fff;
+            font-weight: bold;
+            font-size: 14px;
+            margin:0 25px;
+            padding-top: 25px;
+        }
+        .del_btn,.sure_btn{
+             display: inline-block;
+             width: 33%;
+             margin: 25px;
+             height: 25px;
+             line-height: 25px;
+         }
+        .del_btn{float: left;text-align:left}
+        .sure_btn{float: right;text-align: right;}
+        .del_btn image,.sure_btn image{
+           width: 13px;
+           height: 13px;
+           vertical-align: middle;
+        }

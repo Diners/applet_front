@@ -1,0 +1,111 @@
+
+<view class="page">
+<view class="page-bottom" style="left:-{{left}}px;" bindtap="click_top">
+<view class="yin">
+    <view class="user_cehua_top">
+    <image src="{{header_Img}}" mode="widthFix"></image>
+          <view class="user_cehua_center">
+            <text>{{userName}}</text>
+            <text>{{user_diy}}</text>
+          </view>
+          <view class="user_xinxi">
+          <view class="xinxi_one" style="margin-right:68rpx;">
+            <text>订阅</text>
+            <text>0</text>
+          </view>
+          <view class="border_right"></view>
+          <view class="xinxi_one" style="margin-left:68rpx;">
+            <text>粉丝</text>
+            <text>0</text>
+          </view>
+    </view>
+    <view class="user_cehua_bottom" >
+    <navigator url="../usercenter/index" class="user_list">
+        <image src="../../images/zazhi.png" mode="widthFix"></image>
+        <text>杂志</text>
+      </navigator>
+    <navigator url="../buy/order_index" class="user_list" >
+        <image src="../../images/goumai.png" mode="widthFix"></image>
+        <text>购买</text>
+      </navigator>
+      <!--url="../novel/addModel"-->
+      <!--<navigator  class="user_list" bindtap="tishi"> 
+            <image src="../../images/daili.png" mode="widthFix"></image>
+            <text>代理</text>
+          </navigator>-->
+          <view class="border_bottom" ></view>
+          <navigator url="../account/index" class="user_list" >
+            <image src="../../images/yue.png" mode="widthFix"></image>
+            <text>余额</text>
+          </navigator>
+          <navigator url="../usercenter/edit" class="user_list">
+            <image src="../../images/shezhi.png" mode="widthFix"></image>
+            <text>设置</text>
+          </navigator>
+          <navigator url="../commity/index" class="user_list">   
+            <image src="../../images/shequ.png" mode="widthFix"></image>
+            <text>进入社区</text>
+          </navigator>
+          <view class="padding_bottom"></view>
+    </view>
+    </view>
+    </view>
+</view>
+<view class="page-top"  style="{{sty}}">
+<view style="width:120rpx;height:100rpx;" data-id="changes"  bindtap="changes">
+  <image class="as" src="../../images/gengduo.png" mode="widthFix" ></image>
+  </view>
+ <view class="user_contents" data-id="2">
+      <view class="user_blcak" >
+         <textarea    style="overflow:hidden;overflow-y:hidden;overflow-x:hidden;display:{{none}}" disabled="{{Ishide1}}"  class="{{Ishide1?'':'textares_ac'}}" value="{{cont1}}" bindblur="jianting1" />
+        <view class="hi2" style="display:{{none1}}" >{{Vcont1}}</view>
+
+        <text >{{Eday}} . {{Eda}} {{Eyue}} {{Enian}}</text>
+      </view>
+      <view class="Big_img" style="position:relative" bindtap="chang">
+      <text hidden="true">{{magazine_id}}</text>
+      <view class="fang_img" style="width:100%;height:100%;position:absolute;top:0px;left:0px;z-index:-5">
+      <image src="{{Img}}" style="width:100%;height:100%" mode="aspectFill" ></image>
+      </view>
+        </view>
+        <view class="xinxibufen">
+          <input  type="text" value="{{Inputs}}" class="{{Ishide1?'':'acs'}}" bindblur="jianting3"  />
+          <view class="headers">
+          <image src="{{header_Img}}"></image>
+          <text>{{userName}}</text>
+          <text>{{user_diy}}</text>
+          </view>
+          <textarea  bindblur="jianting2" class="{{Ishide1?'conten':'conten_ac'}}" style="display:{{none}}" rows="2" disabled="{{Ishide1}}"   value="{{cont}}"   />
+          <view class="hi" style="display:{{none1}}" >{{Vcont}}</view>
+          <!--"-->
+            <view class="bot" hidden="{{char1}}">
+              <image src="{{imgList}}" mode="widthFix" bindtap="Save"></image>
+              <image src="../../images/xie.png" style="margin-left:12rpx" mode="widthFix" ></image>
+              <text style="float:right;text-align:right">{{shoucang}}</text>
+            </view>
+             <!--收藏结束-->
+             <!--hidden="{{char}}"-->
+                <view class="bianji" hidden="{{char}}"  >
+                      <view style="transform:rotate({{degs}}deg);transition :0.5s" hidden="{{open}}" >
+                      <image src="../../images/shou_add.png" mode="widthFix" catchtap="xuanzhuan" ></image>
+                      </view>
+                       <image src="../../images/submit.png" hidden="{{open1}}"  mode="widthFix" style="float:right;margin-left:40rpx;" bindtap="submit"></image>
+                    <!--<view class="imgs_List"  style="transition :0.5s;">     138rpx 238rpx 338rpx-->
+                    <image src="../../images/update.png" mode="widthFix" bindtap="bianji" class="addxuan" style="left:{{leftY}}rpx;transform:scale({{scale}});transition:0.7s;"></image>
+                    <image src="../../images/shou_add.png" mode="widthFix" bindtap="add" class="addxuan" style="left:{{leftY1}}rpx;transform:scale({{scale}});transition:0.6s;"></image>
+                    <image src="../../images/erweima.png" mode="widthFix" bindtap="erweicode" class="addxuan" style="left:{{leftY2}}rpx;transform:scale({{scale}});transition:0.5s;"></image>
+                    </view>
+                <!--</view>-->
+                <image src="../../images/arrowNext.png" class="Next" data-id="browse" mode="widthFix" bindtap="browse"></image>
+                <!--编辑结束-->
+        </view>
+  </view>
+</view>
+  <view style="width:100%;height:100%;position:fixed;background:rgba(0,0,0,0.5)" hidden="{{hide}}"></view>
+</view>
+<view class="Tips" hidden="{{ishides}}">
+  <view class="Tips_son">
+    <text>{{Tips}}</text>
+    <image src="../../images/remind.png" mode="widthFix"></image>
+  </view>
+</view>

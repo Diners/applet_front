@@ -1,0 +1,173 @@
+/* pages/address/addAddress.wxss */
+page{
+ background-color: #f6f6f6;
+   position: relative;
+}
+.ShippingAdress-content{
+    margin: 0 auto;
+}
+.ShippingAdress-content .wrapper .name_input {
+    color: #a4a4a4 !important;
+    margin-left:11px;
+    font-size:11px;
+    padding-top: 12px;
+}
+.ShippingAdress-content .wrapper {
+    width: 89%;
+    height:57px;
+    background:#fff;
+    margin: 16px 20px;
+}
+.ShippingAdress-content input[type=text],.ShippingAdress-content input[type=number] {
+    padding: 0;
+    width: 100%;
+    font-size: 14px;
+    color: #282828;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 11px;
+    margin-bottom: 4px;
+    border: 0;
+}
+.ShippingAdress-content .user_detail_addr{
+    width:100%;
+    font-size:14px;
+    color:#131313;
+    height:32px;
+    border:none;
+    line-height: 150%;
+    padding: 0;
+    padding-top:5px;
+}
+.ShippingAdress-content{
+  font-size: 14px;color:#131313;
+  }
+.ShippingAdress-content image{
+  float: right;
+  margin: 15px 5px 0 0;
+ }
+  .ShippingAdress-content .default{
+    color:#131313;
+   width: 89%;
+    height:48px;
+    background:#fff;
+    position: relative;
+    margin: 16px 20px;
+    text-indent: 11px;
+    line-height: 48px;
+}
+.ShippingAdress-content .default .xuanzhong{
+      float:right;
+      width:42rpx;
+      height: 42rpx;
+      position:absolute;
+      top:2px;
+      right:10px;
+}
+
+.save {
+  width: 89%;
+  height: 50px;
+  line-height: 50px;
+  font-size: 14px;
+  background-color: #ffd400;
+  color: #fff;
+  text-align: center; 
+  margin: 70rpx auto;
+border-radius: 0;
+ } 
+.save:after{
+  border: none;
+
+}
+ .sure_mask{
+           position: absolute;
+            top:-80px;
+            left: 0;
+            width:100%;
+            height:150%;
+            background-color: rgba(0,0,0,.5);
+            margin: 0;
+            padding: 0;
+            z-index:9999;
+        }
+        .sure_mask .sure_delete{
+            background-color:#ff3500;
+            width: 80.5%;
+            margin: 60% auto; 
+            height: 124px;
+        }
+        .sure_mask .sure_delete .text{
+            color: #fff;
+            font-weight: bold;
+            font-size: 14px;
+            margin:0 25px;
+            padding-top: 25px;
+        }
+  .sure_mask .sure_delete .del_btn{
+            display: inline-block;
+            width: 33%;
+            margin: 25px;
+            height: 25px;
+            line-height: 25px;
+        }
+         .sure_mask .sure_delete .sure_btn{
+            float: right;
+            width: 23%;
+            margin: 25px;
+            height: 25px;
+            line-height: 25px;
+        }
+        .sure_mask .del_btn{float: left}
+        .sure_mask .sure_btn{float: left;text-align: right;}
+        .sure_mask .del_btn image{
+            width:26rpx;
+            height:26rpx;
+            vertical-align: middle;
+        }
+.sure_mask .sure_btn image{
+    width:36rpx;
+    height:26rpx;
+    vertical-align: middle;
+} 
+ .citypickers{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  background-color: red;
+  z-index: 999;
+}
+
+.citybody {
+  position: fixed;
+  bottom: 0px;
+  background: #fff;
+}
+
+.cityheader {
+  position: absolute;
+  top:0px;
+  width: 100%;
+  z-index: 888;
+}
+
+.city-cancel {
+  float: left;
+  margin: 20rpx;
+  color: #818181;
+}
+
+.city-true {
+  float: right;
+  margin: 20rpx;
+  color: #2FB42E
+}
+
+.section .picker {
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+  padding: 20rpx;
+}
+ 

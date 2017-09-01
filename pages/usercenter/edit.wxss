@@ -1,0 +1,269 @@
+/* pages/usercenter/edit.wxss */
+page{
+  background-color: #f6f6f6;
+  position: relative;
+}
+.mui-content .subContainer{
+    width:80px;
+    height:80px;
+    margin:20px auto;
+    border: 4px solid #fd0;
+    border-radius: 50%;
+    position: relative;
+}
+        .mui-content .subContainer .head_image{
+            display: block;
+            width:80px;
+            height:80px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        .mui-content .subContainer .change{
+            width:27px;
+            height:27px;
+            border-radius: 50%;
+            background-color: #fd0;
+            text-align: center;
+            position: absolute;
+            bottom:2px;
+            right:2px;
+        }
+        .mui-content .subContainer .change image{
+            display: block;
+            margin:6px auto;
+            width:14px;
+            height:14px;
+            vertical-align: middle;
+        }
+        .mui-content .wrapper {
+            width: 89%;
+            height:114rpx;
+            background: #fff;
+            margin: 16px 20px;
+            padding: 0;
+        }
+
+        .mui-content .wrapper .name_input {
+           color: #a4a4a4 !important;
+           margin-left:11px;
+           font-size:11px;
+           padding-top:24rpx;
+        }
+
+        .mui-content .wrapper input {
+            padding: 0;
+            width: 100%;
+            font-size: 14px;
+            color: #282828;
+            height: 28px;
+            line-height: 28px;
+            padding-left: 11px;
+            margin-bottom: 4px;
+            border: 0;
+            font-weight: bold;
+        }
+
+        .mui-content .wrapper .toAddress{
+            display: block;
+            padding: 0;
+            width: 100%;
+            font-size: 14px;
+            color: #282828; 
+            height: 28px;
+            line-height: 28px;       
+            text-indent: 11px;
+            padding-bottom:48rpx;
+            font-weight: bold;
+        }
+        .mui-content  .wrapper .click-hide{
+           position: absolute;
+           font-size: 14px;
+           color:#fd0;
+           right:16px;
+           top:19px;
+           font-weight: bold;
+       }  
+       .sure_mask{
+            position: absolute;
+            top: -60px;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-color: rgba(0,0,0,.5);
+            margin: 0;
+            padding: 0;
+            z-index:999;
+        }
+        .sure_mask .sure_delete{
+            width: 80.5%;
+            margin: 60% auto;
+            height: 124px;
+            background-color: #fff;
+        }
+        .sure_mask .sure_delete .sexAbout{
+            color: #000;
+            font-weight: bold;
+            font-size: 14px;
+            width:80%;
+            margin: 25px 25px 0 25px ;
+            padding-top: 25px;
+        }
+        .sure_mask .sure_delete .man{
+          float: left;
+          display: block;
+          color:#282828;
+          font-size: 14px;
+          margin-right: 60px;
+          text-align: left;
+          }
+        .sure_mask .sure_delete .female{
+          float: left;
+          display: block;
+          color:#282828;
+          font-size: 14px;
+          width:30%;
+          }
+        .sure_mask .sure_delete .man image, .sure_mask .sure_delete .female image{
+            display: inline-block;
+            width:42rpx;
+            height:42rpx;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+         .sure_mask .sure_delete .del_btn{
+            display: inline-block;
+            width: 33%;
+            margin: 25px;
+            height: 25px;
+            line-height: 25px;
+        }
+        .sure_mask .sure_delete .sure_btn{
+            float: right;
+            width: 23%;
+            margin: 25px;
+            height: 25px;
+            line-height: 25px;
+        }
+        .sure_mask .del_btn{float: left}
+        .sure_mask .sure_btn{float: left;text-align: right;}
+        .sure_mask .del_btn image{
+            width:26rpx;
+            height:26rpx;
+            vertical-align: middle;
+        }
+.sure_mask .sure_btn image{
+    width:36rpx;
+    height:26rpx;
+    vertical-align: middle;
+}    
+.save {
+   width: 89%;
+   height: 50px;
+   line-height: 50px;
+   font-size: 14px;
+   background-color: #ffd400;
+   color: #fff;
+   text-align: center; 
+   margin: 0 auto;
+   margin-top:20px; 
+   border-radius: 0;
+ } 
+ .save:after{
+   border: 0;
+ }
+.phone_mask{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(0,0,0,.5);
+    margin: 0;
+    padding: 0;
+    z-index:999;
+ }
+ .phoneContainer{
+   width:80.5%;
+   height:432rpx;
+   margin:60% auto;
+   background: #fff;
+   padding-bottom: 20px;
+ }
+ .phoneContainer .wrapper {
+   width:86.4%;
+   height: 57px;
+   background: #f6f6f6;
+   margin:20px;
+   margin-bottom: 0;
+   padding: 0;
+}
+  .phoneContainer .wrapper .name_input {
+     color: #a4a4a4 !important;
+     margin-left:11px;
+     font-size:11px;
+     padding-top: 12px;
+ }
+
+ .phoneContainer .wrapper input {
+    padding: 0;
+    width: 100%;
+    font-size: 14px;
+    color: #282828;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 11px;
+    margin-bottom: 4px;
+     border: 0;
+     font-weight: bold;
+}
+ .phoneContainer .wrapper .mobilephone{
+  padding: 0;
+    width:70%;
+    font-size: 14px;
+    color: #282828;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 11px;
+    margin-bottom: 4px;
+     font-weight: bold;
+}
+.phoneContainer .wrapper .click-hide{
+   position: absolute;
+   display: inline-block;
+   font-size: 14px;
+   color:#fd0;
+   right:16px;
+   top:19px;
+   font-weight: bold;
+}  
+ .phoneContainer  .del_btn, .phoneContainer .sure_btn{
+     display: inline-block;
+     width: 33%;
+     margin:30px 25px;
+     height: 25px;
+     line-height: 25px;
+}
+.phoneContainer .sure_btn{
+     float: right;
+     width: 23%;
+     margin:30px 25px;
+     height: 25px;
+     line-height: 25px;
+}
+.phoneContainer .del_btn{
+  float: left
+  }
+.phoneContainer .sure_btn{
+  float: left;
+  text-align: right;
+  }
+.phoneContainer .del_btn image{
+    width:26rpx;
+    height:26rpx;
+    vertical-align: middle;
+ }
+.phoneContainer .sure_btn image{
+    width:36rpx;
+    height:26rpx;
+    vertical-align: middle;
+}    

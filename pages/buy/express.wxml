@@ -1,0 +1,19 @@
+<!--pages/buy/express.wxml-->
+<view class="handle">
+    <image src="../../images/express.png"></image>
+    <view class="info">
+       <view>快递单号：{{express_num}}</view>
+       <!--<view class="time">承运公司：顺丰快递</view>-->
+    </view>
+</view>
+<view class="grey_part"></view>
+<view class="container-ex" wx:for="{{express}}">
+  <view class="line">
+     <view class="piont {{index==0?'yellow':'grey'}}"></view>
+  </view>
+  <view class="expressInfo">  
+     <view class="{{index==0?'black':'info'}}">{{item.context}}</view>
+     <view class="time">{{item.time}}</view>
+  </view>
+</view> 
+

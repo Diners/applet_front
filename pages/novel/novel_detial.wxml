@@ -1,0 +1,4 @@
+<!--pages/novel/novel_detial.wxml-->
+<view>
+<image src="{{image}}" style="width:{{windowWidth}}px;height:{{windowHeight}}px"></image>
+</view>
